@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/main.js"></script>
+    <title>Portafolio</title>
+</head>
+<body class="portafolio"onload="main()">
+    <div class="top-banner">
+        <h1>Portafolio de ejercicios taller final HTML-CSS-JS</h1>
+    </div>
+    <div id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="index.html">Formulario de contacto</a>
+            </li>
+            <li>
+                <a href="lista.html">Lista de frutas</a>
+            </li>
+            <li>
+                <a href="portafolio_taller1.html">Portafolio de talleres</a>
+            </li>
+        </ul>
+    </div>
+    <div id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="portafolio_taller1.html">Impresión</a>
+            </li>
+            <li>
+                <a href="portafolio_taller2.html">Condicionales</a>
+            </li>
+            <li>
+                <a href="portafolio_taller3.html">Ciclos</a>
+            </li>
+            <li>
+                <a href="portafolio_taller4.html">Arreglos</a>
+            </li>
+            <li>
+                <a href="portafolio_taller5.html">Funciones</a>
+            </li>
+            <li>
+                <a href="portafolio_tallerJava.html">Java</a>
+            </li>
+            <li>
+                <a href="cv/index.html">Hoja de Vida</a>
+            </li>
+        </ul>
+    </div>
+    <!-- contenido -->
+    <div class="portafolioContainer">
+        <h2 class="center">Taller de ciclos 🌀</h2>
+
+        <h3>Video</h3>
+        <iframe  width="400" height="250" src="https://www.youtube.com/embed/NnovQ2drnlo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <br>
+        <h3>Ejercicios:</h3>    
+        <p><b>1.</b> Realizar la siguiente figura por medio del ciclo Para</p>
+        <img src="img/T3_1.png" alt="Piramide1">
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio1_taller3_semana1_cantera1
+                    Definir i Como Entero;
+                    Definir print Como Caracter;
+                    print<-"*";
+                    para i <-1 Hasta 10 Con Paso 1 Hacer
+                        Escribir print;
+                        print <- concatenar(print,"*");
+                    FinPara
+                FinProceso
+            </pre>
+        </div>
+        <p><b>2.</b> Realizar la siguiente figura por medio del ciclo Mientras - Hacer</p>
+        <img src="img/T3_2.png" alt="Piramide2">
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio2_taller3_semana1_cantera1
+                Definir i, j Como Entero;
+                Definir Aste, Esp, print Como Caracter;
+                i<-1;
+                Mientras i<=10 Hacer
+                Esp<-"";
+                Aste<-"";
+                j<-1;
+                Mientras j<=(10-i) Hacer
+                Esp<-concatenar(esp," ");
+                j<-j+1;
+                FinMientras
+                j<-1;
+                Mientras j<=i Hacer
+                Aste<-concatenar(Aste,"*");
+                j<-j+1;
+                FinMientras;
+                print <- concatenar(Esp,Aste);
+                Escribir print;
+                i<-i+1;
+                FinMientras
+                FinProceso  
+            </pre>
+        </div>
+        <p><b>3.</b> Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</p>
+        <img src="img/T3_3.png" alt="Arbol">
+        <div class="codigoContainer">
+            <pre>
+            Proceso Ejercicio3_taller3_semana1_cantera1
+                Definir i, j ,k Como Entero;
+                Definir Aste, Esp, print Como Caracter;
+                i<-1;
+                k<-1;
+                Repetir
+                    Esp<-"";
+                    Aste<-"";
+                    si i<=11 Entonces
+                        j<-1;
+                        Repetir
+                            si j=1 Entonces
+                            Esp<-concatenar(esp,"");
+                            SiNo
+                            Esp<-concatenar(esp," ");
+                            FinSi
+                            j<-j+1;
+                        hasta que j > (12-i)
+                        j<-1;
+                        repetir
+                            Aste<-concatenar(Aste,"*");
+                            j<-j+1;
+                        Hasta Que j>k
+                        print <- concatenar(Esp,Aste);
+                        print <- concatenar(print,Esp);
+                        Escribir print;
+                    FinSi
+                    k<-k+2;
+                    si i=12 Entonces
+                        j<-1;
+                        Repetir
+                            si j=1 Entonces
+                                Esp<-concatenar(esp,"");
+                            SiNo
+                                Esp<-concatenar(esp," ");
+                            FinSi
+                            j<-j+1;
+                        hasta que j > (10)
+                        j<-1;
+                        repetir
+                            Aste<-concatenar(Aste,"*");
+                            j<-j+1;
+                        Hasta Que j>3
+                        print <- concatenar(Esp,Aste);
+                        print <- concatenar(print,Esp);
+                        Escribir print;
+                        k<-1;
+                    FinSi
+                    si i>=13 Entonces
+                        j<-1;
+                        Repetir
+                            si j=1 Entonces
+                                Esp<-concatenar(esp,"");
+                            SiNo
+                                Esp<-concatenar(esp," ");
+                            FinSi
+                            j<-j+1;
+                        hasta que j > (11-(i-12))
+                        j<-1;
+                        repetir
+                            Aste<-concatenar(Aste,"*");
+                            j<-j+1;
+                        Hasta Que j>k
+                        print <- concatenar(Esp,Aste);
+                        print <- concatenar(print,Esp);
+                        Escribir print;
+                    FinSi
+                i<-i+1;
+                Hasta Que i=16
+            FinProceso
+            </pre>
+        </div>
+        <p><b>4.</b> Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:</p>
+        <img src="img/T3_4.png" alt="Tabla de multiplicar">
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio4_taller4_semana1_cantera1
+                Definir i Como Entero;
+                Definir n Como Entero;
+                Escribir "Ingrese un numero entero";
+                Leer n;
+                para i <-1 Hasta 10 Con Paso 1 Hacer
+                    Escribir i," X ",n," = ", i*n;
+                FinPara
+                FinProceso
+            </pre>
+        </div>
+        <p><b>5.</b> Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.</p>
+        <img src="img/T3_5.png" alt="Menu de ususario">
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio5_taller1_semana1_cantera1
+                Definir opcion Como Entero;
+                Definir nombre, aux Como caracter;
+                nombre<-"";
+                Repetir
+                    limpiar Pantalla;
+                    Escribir"Menú de usuario";
+                    Escribir"1: Capturar nombre";
+                    Escribir"2: Saludar persona";
+                    Escribir"3: Salir del sistema";
+                    leer opcion;
+                    si opcion=1 Entonces
+                    Escribir "Ingrese nombre";
+                                Leer nombre;
+                            FinSi
+                            si opcion=2 Entonces
+                                Escribir "Un saludo a ",nombre;
+                                Escribir "(presione enter para continuar)";
+                                leer aux;
+                            FinSi
+                            si opcion=3 Entonces
+                                Escribir "Adiós";
+                            FinSi
+                            si opcion <> 1 y opcion <> 2 y opcion <> 3 Entonces
+                                Escribir "Opción no válida (presione enter para continuar)";
+                                leer aux;
+                            FinSi
+                    Hasta Que opcion=3
+                FinProceso
+            </pre>
+        </div>
+        <p><b>6.</b> Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio6_taller3_semana1_cantera1
+                    Definir tel1, tel2, tel3, input2 Como real;
+                    definir opcion, opcion2 Como Entero;
+                    Definir nombre1, nombre2, nombre3, aux, aux2, org1, org2, org3, input1, input3 Como caracter;
+                    nombre1<-"";
+                    nombre2<-"";
+                    nombre3<-"";
+                    org1<-"";
+                    org2<-"";
+                    org3<-"";
+                    tel1<-0;
+                    tel2<-0;
+                    tel3<-0;
+                    Repetir
+                        limpiar Pantalla;
+                        Escribir"Menú de usuario";
+                        Escribir"1: Ingresar contacto";
+                        Escribir"2: Buscar contacto";
+                        Escribir"3: Eliminar contacto";
+                        Escribir"4: Salir del sistema";
+                        leer opcion;
+                        Segun Opcion Hacer
+                            1:
+                                si nombre3<>"" y nombre1<>"" y nombre2<>"" Entonces
+                                    Escribir "Numero total de usuarios excedido, para ingresar un nuevo usuario primero elimine uno";
+                                    Escribir"Presione enter para continuar";
+                                    leer aux2;
+                                SiNo
+                                    Escribir "Ingrese el nombre completo del contacto (ejm: juana perez sosa)";
+                                    si nombre1="" Entonces
+                                        Leer input1;
+                                        Escribir "Ingrese el numero del contacto (ejm: 3123456789)";
+                                        leer input2;
+                                        Escribir "Ingrese la organizacion del contacto (ejm: sofka)";
+                                        leer input3;
+                                        si input2<>tel1 y input2<>tel2 y input2<>tel3 Entonces
+                                            nombre1<-input1;
+                                            tel1<-input2;
+                                            org1<-input3;
+                                        FinSi
+                                        input1<-"";
+                                        input2<-0;
+                                        input3<-"";
+                                    SiNo
+                                        si nombre2="" Entonces
+                                            Leer input1;
+                                            Escribir "Ingrese el número del contacto (ejm: 3123456789)";
+                                            leer input2;
+                                            Escribir "Ingrese la organización del contacto (ejm: sofka)";
+                                            leer input3;
+                                            si input2<>tel1 y input2<>tel2 y input2<>tel3 Entonces
+                                                nombre2<-input1;
+                                                tel2<-input2;
+                                                org2<-input3;
+                                            FinSi
+                                            input1<-"";
+                                            input2<-0;
+                                            input3<-"";
+                                        sino
+                                            Leer input1;
+                                            Escribir "Ingrese el numero del contacto (ejm: 3123456789)";
+                                            leer input2;
+                                            Escribir "Ingrese la organizacion del contacto (ejm: sofka)";
+                                            leer input3;
+                                            si input2<>tel1 y input2<>tel2 y input2<>tel3 Entonces
+                                                nombre3<-input1;
+                                                tel3<-input2;
+                                                org2<-input3;
+                                            FinSi
+                                            input1<-"";
+                                            input2<-0;
+                                            input3<-"";
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            2:
+                                Escribir "Ingrese el nombre del contacto";
+                                leer aux;
+                                si aux=nombre1 Entonces
+                                    Escribir "Contacto: ",nombre1," Telefono: ",tel1, " Organizcion: ",org1;
+                                    Escribir"Presione enter para continuar";
+                                    leer aux2;
+                                SiNo
+                                    si aux=nombre2 Entonces
+                                        Escribir "Contacto: ",nombre2," Telefono: ",tel2, " Organizcion: ",org2;
+                                        Escribir"Presione enter para continuar";
+                                        leer aux2;
+                                    SiNo
+                                        si aux=nombre3 Entonces
+                                            Escribir "Contacto: ",nombre3," Telefono: ",tel3, " Organizcion: ",org3;
+                                            Escribir"Presione enter para continuar";
+                                            leer aux2;
+                                        SiNo
+                                            Escribir "Contacto inexistente por favor intente nuevamente (Presione enter para continuar)";
+                                            leer aux2;
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            3:
+                                Escribir"Seleccione el contacto a eliminar:";
+                                Escribir"1: ",nombre1;
+                                Escribir"2: ",nombre2;
+                                Escribir"3: ",nombre3;
+                                leer opcion2;
+                                Segun opcion2 Hacer
+                                    1:
+                                        nombre1<-"";
+                                        tel1<-0;
+                                        org1<-"";
+                                        Escribir "Eliminacion exitosa (presione enter para continuar)";
+                                        leer aux2;
+                                    2:
+                                        nombre2<-"";
+                                        tel2<-0;
+                                        org2<-"";
+                                        Escribir "Eliminacion exitosa (presione enter para continuar)";
+                                        leer aux2;
+                                    3:
+                                        nombre3<-"";
+                                        tel3<-0;
+                                        org3<-"";
+                                        Escribir "Eliminacion exitosa (presione enter para continuar)";
+                                        leer aux2;
+                                    De Otro Modo:
+                                        Escribir "Opcion no válida (presione enter para continuar)";
+                                        leer aux2;
+                                FinSegun
+                            4:
+                                Escribir"Adiós";
+                            De Otro Modo:
+                                Escribir "Opcion no válida (presione enter para continuar)";
+                                leer aux2;
+                        FinSegun
+                    Hasta Que opcion=4
+                FinProceso
+            </pre>
+        </div>
+        <p><b>7.</b> El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio7_taller3_semana1_cantera1
+                    Definir tel1, tel2, tel3, tel4, tel5, input4 Como real;
+                    definir opcion, opcion2 Como Entero;
+                    Definir nombre1, nombre2, nombre3, nombre4, nombre5,
+                     aux, aux2, marca1, marca2, marca3, marca4, marca5,
+                      placa1, placa2, placa3, placa4, placa5, 
+                      input1, input3, input2  Como caracter;
+                    nombre1<-"";
+                    nombre2<-"";
+                    nombre3<-"";
+                    nombre4<-"";
+                    nombre5<-"";
+                    marca1<-"";
+                    marca2<-"";
+                    marca3<-"";
+                    marca4<-"";
+                    marca5<-"";
+                    placa1<-"";
+                    placa2<-"";
+                    placa3<-"";
+                    placa4<-"";
+                    placa5<-"";
+                    tel1<-0;
+                    tel2<-0;
+                    tel3<-0;
+                    tel5<-0;
+                    tel5<-0;
+                    Repetir
+                        limpiar Pantalla;
+                        Escribir"Menú de usuario";
+                        Escribir"1: Ingresar auto";
+                        Escribir"2: Consultar auto";
+                        Escribir"3: Retirar auto";
+                        Escribir"4: Salir del sistema";
+                        leer opcion;
+                        Segun Opcion Hacer
+                            1:
+                                si placa1<>"" y placa2<>"" y placa3<>"" y placa4<>"" y placa5<>"" Entonces
+                                    Escribir "Numero total de autos excedido, para ingresar un nuevo auto primero retire uno";
+                                    Escribir"Presione enter para continuar";
+                                    leer aux2;
+                                SiNo
+                                    Escribir "Ingrese la placa del vehículo (ejm: ABC123)";
+                                    si placa1="" Entonces
+                                        Leer input1;//placa
+                                        Escribir "Ingrese la marca del vehículo (ejm: renault)";
+                                        leer input2;//marca
+                                        Escribir "Ingrese nombre completo del dueño del vehículo";
+                                        leer input3;//nombre
+                                        Escribir "Ingrese el teléfono del dueño del vehículo (ejm: 3123456789)";
+                                        leer input4;//teléfono
+                                        si input1<>placa1 y input1<>placa2 y input1<>placa3 y input1<>placa4 
+                                        y input1<>placa5 Entonces
+                                            placa1<-input1;
+                                            marca1<-input2;
+                                            nombre1<-input3;
+                                            tel1<-input4;
+                                        FinSi
+                                        input1<-"";
+                                        input2<-"";
+                                        input3<-"";
+                                        input4<-0;
+                                    SiNo
+                                        si placa2="" Entonces
+                                            Leer input1;//placa
+                                            Escribir "Ingrese la marca del vehículo (ejm: renault)";
+                                            leer input2;//marca
+                                            Escribir "Ingrese nombre completo del dueño del vehículo";
+                                            leer input3;//nombre
+                                            Escribir "Ingrese el teléfono del dueño del vehículo (ejm: 3123456789)";
+                                            leer input4;//teléfono
+                                            si input1<>placa1 y input1<>placa2 y input1<>placa3 y input1<>placa4
+                                             y input1<>placa5 Entonces
+                                                placa2<-input1;
+                                                marca2<-input2;
+                                                nombre2<-input3;
+                                                tel2<-input4;
+                                            FinSi
+                                            input1<-"";
+                                            input2<-"";
+                                            input3<-"";
+                                            input4<-0;
+                                        SiNo
+                                            si placa3="" Entonces
+                                                Leer input1;//placa
+                                                Escribir "Ingrese la marca del vehículo (ejm: renault)";
+                                                leer input2;//marca
+                                                Escribir "Ingrese nombre completo del dueño del vehículo";
+                                                leer input3;//nombre
+                                                Escribir "Ingrese el teléfono del dueño del vehículo (ejm: 3123456789)";
+                                                leer input4;//teléfono
+                                                si input1<>placa1 y input1<>placa2 y input1<>placa3 y input1<>placa4
+                                                 y input1<>placa5 Entonces
+                                                    placa3<-input1;
+                                                    marca3<-input2;
+                                                    nombre3<-input3;
+                                                    tel3<-input4;
+                                                FinSi
+                                                input1<-"";
+                                                input2<-"";
+                                                input3<-"";
+                                                input4<-0;
+                                            SiNo
+                                                si placa4="" Entonces
+                                                    Leer input1;//placa
+                                                    Escribir "Ingrese la marca del vehículo (ejm: renault)";
+                                                    leer input2;//marca
+                                                    Escribir "Ingrese nombre completo del dueño del vehículo";
+                                                    leer input3;//nombre
+                                                    Escribir "Ingrese el teléfono del dueño del vehículo (ejm: 3123456789)";
+                                                    leer input4;//teléfono
+                                                    si input1<>placa1 y input1<>placa2 y input1<>placa3 y input1<>placa4
+                                                     y input1<>placa5 Entonces
+                                                        placa4<-input1;
+                                                        marca4<-input2;
+                                                        nombre4<-input3;
+                                                        tel4<-input4;
+                                                    FinSi
+                                                    input1<-"";
+                                                    input2<-"";
+                                                    input3<-"";
+                                                    input4<-0;
+                                                SiNo
+                                                    si placa5="" Entonces
+                                                        Leer input1;//placa
+                                                        Escribir "Ingrese la marca del vehículo (ejm: renault)";
+                                                        leer input2;//marca
+                                                        Escribir "Ingrese nombre completo del dueño del vehículo";
+                                                        leer input3;//nombre
+                                                        Escribir "Ingrese el teléfono del dueño del vehículo (ejm: 3123456789)";
+                                                        leer input4;//teléofno
+                                                        si input1<>placa1 y input1<>placa2 y input1<>placa3 y input1<>placa4
+                                                         y input1<>placa5 Entonces
+                                                            placa5<-input1;
+                                                            marca5<-input2;
+                                                            nombre5<-input3;
+                                                            tel5<-input4;
+                                                        FinSi
+                                                        input1<-"";
+                                                        input2<-"";
+                                                        input3<-"";
+                                                        input4<-0;
+                                                    FinSi
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            2:
+                                Escribir "Ingrese al placa del vehículo";
+                                leer aux;
+                                si aux=placa1 Entonces
+                                    Escribir "Contacto: ",nombre1," | Teléfono: ",tel1, " | Marca: ",marca1," | Placa: ",placa1 ;
+                                    Escribir"Presione enter para continuar";
+                                    leer aux2;
+                                SiNo
+                                    si aux=placa2 Entonces
+                                        Escribir "Contacto: ",nombre2," | Teléfono: ",tel2, " | Marca: ",marca2," | Placa: ",placa2 ;
+                                        Escribir"Presione enter para continuar";
+                                        leer aux2;
+                                    SiNo
+                                        si aux=placa3 Entonces
+                                            Escribir "Contacto: ",nombre3," | Teléfono: ",tel3, " | Marca: ",marca3," | Placa: ",placa3 ;
+                                            Escribir"Presione enter para continuar";
+                                            leer aux2;
+                                        SiNo
+                                            si aux=placa4 Entonces
+                                                Escribir "Contacto: ",nombre4," | Teléfono: ",tel4, " | Marca: ",marca4," | Placa: ",placa4 ;
+                                                Escribir"Presione enter para continuar";
+                                                leer aux2;
+                                            SiNo
+                                                si aux=placa5 Entonces
+                                                    Escribir "Contacto: ",nombre5," | Teléfono: ",tel5, " | Marca: ",marca5," | Placa: ",placa5 ;
+                                                    Escribir"Presione enter para continuar";
+                                                    leer aux2;
+                                                SiNo
+                                                    Escribir "Vehiculo inexistente por favor intente nuevamente (Presione enter para continuar)";
+                                                    leer aux2;
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            3:
+                                Escribir"Seleccione el vehículo a retirar:";
+                                Escribir"1: ",placa1, " ",marca1;
+                                Escribir"2: ",placa2, " ",marca2;
+                                Escribir"3: ",placa3, " ",marca3;
+                                Escribir"4: ",placa4, " ",marca4;
+                                Escribir"5: ",placa5, " ",marca5;
+                                leer opcion2;
+                                Segun opcion2 Hacer
+                                    1:
+                                        placa1<-"";
+                                        marca1<-"";
+                                        nombre1<-"";
+                                        tel1<-0;
+                                        Escribir "Eliminación exitosa (presione enter para continuar)";
+                                        leer aux2;
+                                    2:
+                                        placa2<-"";
+                                        marca2<-"";
+                                        nombre2<-"";
+                                        tel2<-0;
+                                        Escribir "Eliminación exitosa (presione enter para continuar)";
+                                        leer aux2;
+                                    3:
+                                        placa3<-"";
+                                        marca3<-"";
+                                        nombre3<-"";
+                                        tel3<-0;
+                                        Escribir "Eliminación exitosa (presione enter para continuar)";
+                                        leer aux2;
+                                    4:
+                                        placa4<-"";
+                                        marca4<-"";
+                                        nombre4<-"";
+                                        tel4<-0;
+                                        Escribir "Eliminación exitosa (presione enter para continuar)";
+                                        leer aux2;
+                                    5:
+                                        placa5<-"";
+                                        marca5<-"";
+                                        nombre5<-"";
+                                        tel5<-0;
+                                        Escribir "Eliminacion exitosa (presione enter para continuar)";
+                                        leer aux2;
+                                    De Otro Modo:
+                                        Escribir "Opción no válida (presione enter para continuar)";
+                                        leer aux2;
+                                FinSegun
+                            4:
+                                Escribir"Adiós";
+                            De Otro Modo:
+                                Escribir "Opción no válida (presione enter para continuar)";
+                                leer aux2;
+                        FinSegun
+                    Hasta Que opcion=4
+                FinProceso
+            </pre>
+        </div>
+        <p><b>8.</b> La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio8_taller3_semana1_cantera1
+                    definir opcion, opcion2 Como Entero;
+                    Definir 	nombre1, nombre2, nombre3, nombre4, nombre5,
+                     nombre6, nombre7, nombre8,	aux, aux2, resultado1, resultado2,
+                      resultado3, resultado4, resultado5, resultado6, resultado7,
+                       resultado8, input1, input3, input2  Como caracter;
+                    nombre1<-"";
+                    nombre2<-"";
+                    nombre3<-"";
+                    nombre4<-"";
+                    nombre5<-"";
+                    nombre6<-"";
+                    nombre7<-"";
+                    nombre8<-"";
+                    resultado1<-"";
+                    resultado2<-"";
+                    resultado3<-"";
+                    resultado4<-"";
+                    resultado5<-"";
+                    resultado6<-"";
+                    resultado7<-"";
+                    resultado8<-"";
+                    Repetir
+                        limpiar Pantalla;
+                        Escribir"Menú de usuario";
+                        Escribir"1: Ingresar usuario";
+                        Escribir"2: Ingresar resultados";
+                        Escribir"3: Consultar usuarios que presentaron el curso";
+                        Escribir"4: Salir del sistema";
+                        leer opcion;
+                        Segun Opcion Hacer
+                            1:
+                                si nombre1<>"" y nombre2<>"" y nombre3<>"" y nombre4<>"" 
+                                y nombre5<>"" y nombre6<>"" y nombre7<>"" y nombre8<>"" Entonces
+                                    Escribir "Número total de usuarios excedido";
+                                    Escribir"Presione enter para continuar";
+                                    leer aux2;
+                                SiNo
+                                    Escribir "Ingrese el nombre completo del ususario";
+                                    si nombre1="" Entonces
+                                        Leer input1;//nombre
+                                        si input1<>nombre1 y input1<>nombre2 y input1<>nombre3 
+                                        y input1<>nombre4 y input1<>nombre5 y input1<>nombre6 y
+                                         input1<>nombre7 y input1<>nombre8 Entonces
+                                            nombre1<-input1;
+                                        SiNo
+                                            Escribir"El nombre ingresado ya pertenece a un usuario existente";
+                                            Escribir"Presione enter para continuar";
+                                            leer aux2;
+                                        FinSi
+                                        input1<-"";
+                                    SiNo
+                                        si nombre2="" Entonces
+                                            Leer input1;//nombre
+                                            si input1<>nombre1 y input1<>nombre2 y input1<>nombre3 
+                                            y input1<>nombre4 y input1<>nombre5 y input1<>nombre6 
+                                            y input1<>nombre7 y input1<>nombre8 Entonces
+                                                nombre2<-input1;
+                                            SiNo
+                                                Escribir"El nombre ingresado ya pertenece a un usuario existente";
+                                                Escribir"Presione enter para continuar";
+                                                leer aux2;
+                                            FinSi
+                                            input1<-"";
+                                        SiNo
+                                            si nombre3="" Entonces
+                                                Leer input1;//nombre
+                                                si input1<>nombre1 y input1<>nombre2 y input1<>nombre3 
+                                                y input1<>nombre4 y input1<>nombre5 y input1<>nombre6 
+                                                y input1<>nombre7 y input1<>nombre8 Entonces
+                                                    nombre3<-input1;
+                                                SiNo
+                                                    Escribir"El nombre ingresado ya pertenece a un usuario existente";
+                                                    Escribir"Presione enter para continuar";
+                                                    leer aux2;
+                                                FinSi
+                                                input1<-"";
+                                            SiNo
+                                                si nombre4="" Entonces
+                                                    Leer input1;//nombre
+                                                    si input1<>nombre1 y input1<>nombre2 y input1<>nombre3 
+                                                        y input1<>nombre4 y input1<>nombre5 y input1<>nombre6 
+                                                        y input1<>nombre7 y input1<>nombre8 Entonces
+                                                        nombre4<-input1;
+                                                    SiNo
+                                                        Escribir"El nombre ingresado ya pertenece a un usuario existente";
+                                                        Escribir"Presione enter para continuar";
+                                                        leer aux2;	
+                                                    FinSi
+                                                    input1<-"";
+                                                SiNo
+                                                    si nombre5="" Entonces
+                                                        Leer input1;//nombre
+                                                        si input1<>nombre1 y input1<>nombre2 y input1<>nombre3
+                                                         y input1<>nombre4 y input1<>nombre5 y input1<>nombre6
+                                                          y input1<>nombre7 y input1<>nombre8 Entonces
+                                                            nombre5<-input1;
+                                                        SiNo
+                                                            Escribir"El nombre ingresado ya pertenece a un usuario existente";
+                                                            Escribir"Presione enter para continuar";
+                                                            leer aux2;	
+                                                        FinSi
+                                                        input1<-"";
+                                                    SiNo
+                                                        si nombre6="" Entonces
+                                                            Leer input1;//nombre
+                                                            si input1<>nombre1 y input1<>nombre2 y input1<>nombre3
+                                                             y input1<>nombre4 y input1<>nombre5 y input1<>nombre6 
+                                                             y input1<>nombre7 y input1<>nombre8 Entonces
+                                                                nombre6<-input1;
+                                                            SiNo
+                                                                Escribir"El nombre ingresado ya pertenece a un usuario existente";
+                                                                Escribir"Presione enter para continuar";
+                                                                leer aux2;	
+                                                            FinSi
+                                                            input1<-"";
+                                                        SiNo
+                                                            si nombre7="" Entonces
+                                                                Leer input1;//nombre
+                                                                si input1<>nombre1 y input1<>nombre2 y input1<>nombre3 
+                                                                y input1<>nombre4 y input1<>nombre5 y input1<>nombre6 
+                                                                y input1<>nombre7 y input1<>nombre8 Entonces
+                                                                    nombre7<-input1;
+                                                                SiNo
+                                                                    Escribir"El nombre ingresado ya pertenece a un usuario existente";
+                                                                    Escribir"Presione enter para continuar";
+                                                                    leer aux2;	
+                                                                FinSi
+                                                                input1<-"";
+                                                            SiNo
+                                                                si nombre8="" Entonces
+                                                                    Leer input1;//nombre
+                                                                    si input1<>nombre1 y input1<>nombre2 y input1<>nombre3
+                                                                     y input1<>nombre4 y input1<>nombre5 y input1<>nombre6
+                                                                      y input1<>nombre7 y input1<>nombre8 Entonces
+                                                                        nombre8<-input1;
+                                                                    SiNo
+                                                                        Escribir"El nombre ingresado ya pertenece a un usuario existente";
+                                                                        Escribir"Presione enter para continuar";
+                                                                        leer aux2;	
+                                                                    FinSi
+                                                                    input1<-"";
+                                                                FinSi
+                                                                
+                                                            FinSi
+                                                        FinSi
+                                                    FinSi
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            2:
+                                Escribir"Seleccione el estudiante a calificar:";
+                                Escribir"1: ",nombre1;
+                                Escribir"2: ",nombre2;
+                                Escribir"3: ",nombre3;
+                                Escribir"4: ",nombre4;
+                                Escribir"5: ",nombre5;
+                                Escribir"6: ",nombre6;
+                                Escribir"7: ",nombre7;
+                                Escribir"8: ",nombre8;
+                                leer opcion2;
+                                Segun opcion2 Hacer
+                                    1:
+                                        Escribir "Ingrese la calificacion del usuario (APROBADO o REPROBADO)";
+                                        leer input2;
+                                        resultado1<-input2;
+                                        Escribir "Ingreso exitoso (presione enter para continuar)";
+                                        leer aux2;
+                                    2:
+                                        Escribir "Ingrese la calificacion del usuario (APROBADO o REPROBADO)";
+                                        leer input2;
+                                        resultado2<-input2;
+                                        Escribir "Ingreso exitoso (presione enter para continuar)";
+                                        leer aux2;
+                                    3:
+                                        Escribir "Ingrese la calificacion del usuario (APROBADO o REPROBADO)";
+                                        leer input2;
+                                        resultado3<-input2;
+                                        Escribir "Ingreso exitoso (presione enter para continuar)";
+                                        leer aux2;
+                                    4:
+                                        Escribir "Ingrese la calificacion del usuario (APROBADO o REPROBADO)";
+                                        leer input2;
+                                        resultado4<-input2;
+                                        Escribir "Ingreso exitoso (presione enter para continuar)";
+                                        leer aux2;	
+                                    5:
+                                        Escribir "Ingrese la calificacion del usuario (APROBADO o REPROBADO)";
+                                        leer input2;
+                                        resultado5<-input2;
+                                        Escribir "Ingreso exitoso (presione enter para continuar)";
+                                        leer aux2;
+                                    6:
+                                        Escribir "Ingrese la calificacion del usuario (APROBADO o REPROBADO)";
+                                        leer input2;
+                                        resultado6<-input2;
+                                        Escribir "Ingreso exitoso (presione enter para continuar)";
+                                        leer aux2;
+                                    7:
+                                        Escribir "Ingrese la calificacion del usuario (APROBADO o REPROBADO)";
+                                        leer input2;
+                                        resultado7<-input2;
+                                        Escribir "Ingreso exitoso (presione enter para continuar)";
+                                        leer aux2;
+                                    8:
+                                        Escribir "Ingrese la calificacion del usuario (APROBADO o REPROBADO)";
+                                        leer input2;
+                                        resultado8<-input2;
+                                        Escribir "Ingreso exitoso (presione enter para continuar)";
+                                        leer aux2;
+                                        
+                                    De Otro Modo:
+                                        Escribir "Opción no válida (presione enter para continuar)";
+                                        leer aux2;
+                                FinSegun
+                            3:
+                                Escribir "Estudiantes y resultados del curso de conducción";
+                                Escribir "El estudiante ",nombre1, " ha sido inscrito al curso y obtuvo un resultado de: ", resultado1;
+                                Escribir "El estudiante ",nombre2, " ha sido inscrito al curso y obtuvo un resultado de: ", resultado2;
+                                Escribir "El estudiante ",nombre3, " ha sido inscrito al curso y obtuvo un resultado de: ", resultado3;
+                                Escribir "El estudiante ",nombre4, " ha sido inscrito al curso y obtuvo un resultado de: ", resultado4;
+                                Escribir "El estudiante ",nombre5, " ha sido inscrito al curso y obtuvo un resultado de: ", resultado5;
+                                Escribir "El estudiante ",nombre6, " ha sido inscrito al curso y obtuvo un resultado de: ", resultado6;
+                                Escribir "El estudiante ",nombre7, " ha sido inscrito al curso y obtuvo un resultado de: ", resultado7;
+                                Escribir "El estudiante ",nombre8, " ha sido inscrito al curso y obtuvo un resultado de: ", resultado8;
+                                Escribir"Presione enter para continuar";
+                                leer aux2;	
+                                
+                            4:
+                                Escribir"Adiós";
+                            De Otro Modo:
+                                Escribir "Opción no válida (presione enter para continuar)";
+                                leer aux2;
+                        FinSegun
+                    Hasta Que opcion=4
+                FinProceso
+
+            </pre>
+        </div>
+    </div>
+</body>
+
+</html>

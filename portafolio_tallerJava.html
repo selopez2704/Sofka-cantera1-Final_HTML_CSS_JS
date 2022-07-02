@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/main.js"></script>
+    <title>Portafolio</title>
+</head>
+<body class="portafolio"onload="main()">
+    <div class="top-banner">
+        <h1>Portafolio de ejercicios taller final HTML-CSS-JS</h1>
+    </div>
+    <div id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="index.html">Formulario de contacto</a>
+            </li>
+            <li>
+                <a href="lista.html">Lista de frutas</a>
+            </li>
+            <li>
+                <a href="portafolio_taller1.html">Portafolio de talleres</a>
+            </li>
+        </ul>
+    </div>
+    <div id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="portafolio_taller1.html">Impresión</a>
+            </li>
+            <li>
+                <a href="portafolio_taller2.html">Condicionales</a>
+            </li>
+            <li>
+                <a href="portafolio_taller3.html">Ciclos</a>
+            </li>
+            <li>
+                <a href="portafolio_taller4.html">Arreglos</a>
+            </li>
+            <li>
+                <a href="portafolio_taller5.html">Funciones</a>
+            </li>
+            <li>
+                <a href="portafolio_tallerJava.html">Java</a>
+            </li>
+            <li>
+                <a href="cv/index.html">Hoja de Vida</a>
+            </li>
+        </ul>
+    </div>
+    <!-- contenido -->
+    <div class="portafolioContainer">
+        <h2 class="center">Taller de Java ☕</h2>
+        
+        <h3>Realizar el taller #1 de PSeInt en Java</h3>    
+        <br>
+        <p><b>1.</b> Realizar un programa el cual solicite su nombre y apellidos.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio1_taller1;
+            import java.util.Arrays;
+            import java.util.Scanner;
+            public class Main {
+                private static String nombre;
+                private static String apellidos;
+                public static void main(String[] args){
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese su nombre");
+                    nombre=read.nextLine();
+                    System.out.println("Ingrese sus apellidos separado por un espacio en blanco");
+                    apellidos=read.nextLine();
+                }
+            }
+            </pre>
+        </div>
+        <p><b>2.</b> Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio2_taller1;
+            import java.util.Scanner;
+            public class Main {
+                private static String nombre;
+                private static String apellidos;
+                private static byte edad;
+                private static float estatura;
+                public static void main(String[] args){
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese su nombre");
+                    nombre=read.nextLine();
+                    System.out.println("Ingrese sus apellidos separado por un espacio en blanco");
+                    apellidos=read.nextLine();
+                    System.out.println("Ingrese su edad (ejm: 27)");
+                    edad=read.nextByte();
+                    System.out.println("Ingrese su estatura (ejm: 1,70)");
+                    estatura=read.nextFloat();
+                }
+            }
+            </pre>
+        </div>
+        <p><b>3.</b> Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio3_taller1;
+            import java.util.Scanner;
+            public class Main {
+                private static String nombre;
+                private static String apellidos;
+                private static String nombreMadre;
+                private static String apellidosMadre;
+                private static String apellidosPadre;
+                private static String nombrePadre;
+                public static void main(String[] args){
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese su nombre");
+                    nombre=read.nextLine();
+                    System.out.println("Ingrese sus apellidos separado por un espacio en blanco");
+                    apellidos=read.nextLine();
+                    System.out.println("Ingrese el nombre de su madre");
+                    nombreMadre=read.nextLine();
+                    System.out.println("Ingrese sus apellidos de su madre separado por un espacio en blanco");
+                    apellidosMadre=read.nextLine();
+                    System.out.println("Ingrese el nombre de su padre");
+                    nombrePadre=read.nextLine();
+                    System.out.println("Ingrese sus apellidos de su padre separado por un espacio en blanco ");
+                    apellidosPadre=read.nextLine();
+                    System.out.println("Yo "+nombre+" "+apellidos+", soy hijo de "+nombreMadre+" y "+nombrePadre);
+                }
+            }
+            </pre>
+        </div>
+        <p><b>4.</b> Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio4_taller1;
+
+            import java.util.Scanner;
+            public class Main {
+                private static String capital;
+                private static String pais;
+                public static void main(String[] args){
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese pais");
+                    pais=read.nextLine();
+                    System.out.println("Ingrese la capital del anterior pais");
+                    capital=read.nextLine();
+                    System.out.println("La ciudad "+capital+", es la capital del pais "+pais);
+                }
+            }
+            </pre>
+        </div>
+        <p><b>5.</b>Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio5_taller1;
+            import java.util.Scanner;
+            public class Main {
+                private static String nombreMascota;
+                private static String edad;
+                private static String tipo;
+                private static String nombreDueno;
+                public static void main(String[] args){
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese el nombre de su mascota");
+                    nombreMascota=read.nextLine();
+                    System.out.println("Ingrese el la edad en anios de su mascota (ejm: 3)");
+                    edad=read.nextLine();
+                    System.out.println("Ingrese el tipo de mascota");
+                    tipo=read.nextLine();
+                    System.out.println("Ingrese su nombre completo");
+                    nombreDueno=read.nextLine();
+                    System.out.println(nombreMascota+" es un(a) "+ tipo +", el cual, tiene "+edad+" 
+                    anios de edad  y " +nombreDueno+" es actualmente su duenio(a).");
+            
+                }
+            }
+            </pre>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>Realizar el taller #2 de PSeInt en Java</h3>
+        <p><b>1.</b> Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio1_taller2;
+            import java.util.Scanner;
+            public class Main {
+                private static Byte edad;
+                public static void main(String[] args){
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese su edad (ejm: 13)");
+                    edad=read.nextByte();
+                    if (edad>=18){
+                        System.out.println("Usted es mayor de edad");
+                    }
+            
+                }
+            }
+            </pre>
+        </div>
+        <p><b>2.</b> Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio2_taller2;
+            import java.util.Scanner;
+            public class Main {
+                private static Byte edad;
+                public static void main(String[] args){
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese su edad (ejm: 13)");
+                    edad=read.nextByte();
+                    if (edad<18){
+                        System.out.println(" Usted aun es un nino(a)." ); 
+                    }
+            
+                }
+            }
+            </pre>
+        </div>
+        <p><b>3.</b> Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio3_taller2;
+            import java.util.Scanner;
+            public class Main {
+                private static Byte edad;
+                private static String nombre;
+                private static String apellidos;
+            
+                public static void main(String[] args){
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese su nombre");
+                    nombre=read.nextLine();
+                    System.out.println("Ingrese sus apellidos separado por un espacio en blanco ");
+                    apellidos=read.nextLine();
+                    System.out.println("Ingrese su edad (ejm: 13)");
+                    edad=read.nextByte();
+                    if (edad<18){
+                        System.out.println(nombre+" "+apellidos+" usted es menor de edad, por lo tanto,
+                         no puede entrar a la fiesta, por favor devuelvase a su casa.");
+                    }else {
+                        System.out.println(nombre+" "+apellidos+"  usted es mayor de edad, por lo tanto puede entrar a la fiesta.");
+                    }
+            
+                }
+            }
+            </pre>
+        </div>
+        <p><b>4.</b> La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio4_taller2;
+
+            import java.util.Scanner;
+            public class Main {
+                private static Byte opcion;
+                private static String anotacion;
+                private static Byte opcion2;
+            
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese el numero correspondiente a la opcion que quiere realizar: ");
+                    System.out.println("1: Alquilar pelicula");
+                    System.out.println("2: Consultar peliculas disponibles");
+                    System.out.println("3: Recibir pelicula");
+                    opcion=read.nextByte();
+                    switch (opcion){
+                        case 1:
+                            System.out.println("Ha seleccionado la opcion: Alquilar pelicula");
+                            break;
+                        case 2:
+                            System.out.println("Ha seleccionado la opcion: Consultar peliculas disponibles");
+                            break;
+                        case 3:
+                            System.out.println("Ha seleccionado la opcion Recibir pelicula");
+                            System.out.println("Desea realizar una anotacion [Si:1  /  No:2]");
+                            opcion2=read.nextByte();
+                            read.nextLine();
+                            switch (opcion2){
+                                case 1:
+                                    System.out.println("Ingrese anotacion");
+                                    anotacion=read.nextLine();
+                                    System.out.println(anotacion);
+                                    break;
+                                case 2:
+                                    break;
+                                default:
+                                    System.out.println("Opcion no valida");
+                                    break;
+                            }break;
+                        default:
+                            System.out.println("Opcion no valida");
+                            break;
+                    }
+                }
+            }
+            </pre>
+        </div>
+        <p><b>5.</b> La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio5_taller2;
+
+            import java.util.Scanner;
+            public class Main {
+                private static Byte opcion;
+            
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese el numero correspondiente a la opcion que quiere realizar: ");
+                    System.out.println("1: Compra de producto");
+                    System.out.println("2: Consulta de precios por producto");
+                    System.out.println("3: Devoluciones");
+                    opcion=read.nextByte();
+                    switch (opcion){
+                        case 1:
+                            System.out.println("Ha seleccionado la opcion: Compra de producto");
+                            break;
+                        case 2:
+                            System.out.println("Ha seleccionado la opcion: Consulta de precios por producto");
+                            break;
+                        case 3:
+                            System.out.println("Ha seleccionado la opcion: Devoluciones");
+                            break;
+                        default:
+                            System.out.println("Opcion no valida");
+                            break;
+                    }
+                }
+            }
+            </pre>
+        </div>
+        <p><b>6.</b> El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio6_taller2;
+
+            import java.util.Scanner;
+            public class Main {
+                private static Byte opcion;
+                private static String observacion;
+                private static String novedades;
+                private static String arreglos;
+            
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese el numero correspondiente a la opcion que quiere realizar: ");
+                    System.out.println("1: Registrar ingreso de motocicleta");
+                    System.out.println("2: Registrar salida de motococleta");
+                    System.out.println("3: Registrar arreglos realizados");
+                    opcion=read.nextByte();
+                    read.nextLine();
+                    switch (opcion){
+                        case 1:
+                            System.out.println("Ha seleccionado la opcion: ingreso de motocicleta");
+                            System.out.println("Ingrese las observaciones del cliente");
+                            observacion= read.nextLine();
+                            break;
+                        case 2:
+                            System.out.println("Ha seleccionado la opcion: salida de motococleta");
+                            System.out.println("Ingrese novedades del mecanico");
+                            novedades= read.nextLine();
+                            break;
+                        case 3:
+                            System.out.println("Ha seleccionado la opcion: salida de motococleta");
+                            System.out.println("Ingrese los arreglos hechos por el mecanico");
+                            arreglos= read.nextLine();
+                            break;
+                        default:
+                            System.out.println("Opcion no valida");
+                            break;
+                    }
+                }
+            }
+            </pre>
+        </div>
+        <p><b>7.</b> La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio7_taller2;
+
+            import java.util.Scanner;
+            import java.lang.Math;
+            public class Main {
+                private static Double peso;
+                private static Double estatura;
+                private static Double imc;
+            
+            
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese su peso en kilogramos (ejm: 71,1, etc)");
+                    peso=read.nextDouble();
+                    System.out.println("Ingrese su estatura en metros (ejm: 1,90)");
+                    estatura=read.nextDouble();
+                    imc=peso/(Math.pow(estatura,2));
+                    if (imc< 18.5){
+                        System.out.println("Su rango es BAJO PESO");
+                    }else if(imc >= 18.5 && imc <= 24.9){
+                        System.out.println("Su rango es NORMAL");
+                    } else if (imc > 24.9 && imc <= 29.9) {
+                        System.out.println("Su rango es SOBREPESO");
+                    }else if(imc > 29.9){
+                        System.out.println("Su rango es OBESO");
+                    }
+                }
+            }
+            </pre>
+        </div>
+        <p><b>8.</b> El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio8_taller2;
+
+            import java.util.Scanner;
+            public class Main {
+                private static Byte opcion;
+                private static int porciones;
+                private static String sabor;
+                private static String decoraciones;
+                private static Double venta;
+            
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese el numero correspondiente a la opcion que quiere realizar: ");
+                    System.out.println("1: Registrar pedido");
+                    System.out.println("2: Registrar tortas disponibles");
+                    System.out.println("3: Registrar ventas");
+                    opcion=read.nextByte();
+                    read.nextLine();
+                    switch (opcion){
+                        case 1:
+                            System.out.println("Ha seleccionado la opcion: Registrar pedido");
+                            System.out.println("Ingrese las especificaciones de la torta");
+                            System.out.println("Ingrese Numero de porciones (ejm: 8)");
+                            porciones= read.nextInt();
+                            read.nextLine();
+                            System.out.println("Ingrese el sabor de la torta");
+                            sabor= read.nextLine();
+                            System.out.println("Ingrese las decoraciones de la torta");
+                            decoraciones= read.nextLine();
+                            break;
+                        case 2:
+                            System.out.println("Ha seleccionado la opcion: Registrar tortas disponibles");
+                            System.out.println("Ingrese las especificaciones de la torta");
+                            System.out.println("Ingrese Numero de porciones (ejm: 8)");
+                            porciones= read.nextInt();
+                            read.nextLine();
+                            System.out.println("Ingrese el sabor de la torta");
+                            sabor= read.nextLine();
+                            System.out.println("Ingrese las decoraciones de la torta");
+                            decoraciones= read.nextLine();
+                            break;
+                        case 3:
+                            System.out.println("Ha seleccionado la opcion: Registrar ventas");
+                            System.out.println("Ingrese la venta (ejm: 50000)");
+                            venta= read.nextDouble();
+                            break;
+                        default:
+                            System.out.println("Opcion no valida");
+                            break;
+                    }
+                }
+            }
+            </pre>
+        </div>
+        <p><b>9.</b> El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio9_taller2;
+
+            import java.util.Scanner;
+            public class Main {
+                private static Byte opcion;
+                private static Double lado1;
+                private static Double lado2;
+                private static Double lado3;
+                private static Double area;
+            
+            
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese el numero correspondiente a la opcion que quiere realizar: ");
+                    System.out.println("1: Calcular el area de un rectángulo");
+                    System.out.println("2: Calcular el area de un triángulo");
+                    System.out.println("3: Calcular el area de un Trapecio");
+                    opcion=read.nextByte();
+                    read.nextLine();
+                    switch (opcion){
+                        case 1:
+                            System.out.println("Ha seleccionado la opcion: Calcular el area de un rectangulo");
+                            System.out.println("Ingrese la longitud del lado A (ejm: 25)");
+                            lado1= read.nextDouble();
+                            System.out.println("Ingrese la longitud del lado B (ejm: 20)");
+                            lado2= read.nextDouble();
+                            area=lado1*lado2;
+                            System.out.println("El area es "+ area);
+                            break;
+                        case 2:
+                            System.out.println("Ha seleccionado la opcion: Calcular el area de un triangulo");
+                            System.out.println("Ingrese la longitud de la base (ejm: 40)");
+                            lado1= read.nextDouble();
+                            System.out.println("Ingrese la altura (ejm: 18)");
+                            lado2= read.nextDouble();
+                            area=(lado1*lado2)/2;
+                            System.out.println("El area es "+ area);
+                            break;
+                        case 3:
+                            System.out.println("Ha seleccionado la opcion: Calcular el area de un Trapecio");
+                            System.out.println("Ingrese la longitud de la base inferior (ejm: 40)");
+                            lado1= read.nextDouble();
+                            System.out.println("Ingrese la longitud de la base superior (ejm: 18)");
+                            lado2= read.nextDouble();
+                            System.out.println("Ingrese la altura (ejm: 15)");
+                            lado3= read.nextDouble();
+                            area=((lado1+lado2)/2)*lado3;
+                            System.out.println("El area es "+ area);
+                            break;
+                        default:
+                            System.out.println("Opcion no valida");
+                            break;
+                    }
+                }
+            }
+            </pre>
+        </div>
+        <p><b>10.</b> El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio10_taller2;
+
+
+            import java.util.Scanner;
+            public class Main {
+                private static Byte opcion;
+                private static String nombre;
+                private static Double cantidad;
+                private static Double ingreso;
+                private static Double retiro;
+            
+            
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingrese el nombre del titular de la cuenta");
+                    nombre=read.nextLine();
+                    System.out.println("Ingrese la cantidad");
+                    cantidad=read.nextDouble();
+                    System.out.println("Ingrese el numero correspondiente a la opcion que quiere realizar: ");
+                    System.out.println("1: Realizar ingreso");
+                    System.out.println("2: Realizar retiro");
+                    System.out.println("3: Consultar saldo");
+                    opcion=read.nextByte();
+                    read.nextLine();
+                    switch (opcion){
+                        case 1:
+                            System.out.println("Ha seleccionado la opcion: Realizar ingreso.");
+                            System.out.println("Ingrese monto de ingreso");
+                            ingreso= read.nextDouble();
+                            if (ingreso>0){
+                                System.out.println("Ingreso exitoso");
+                                cantidad+=ingreso;
+                            }else {
+                                System.out.println("Los ingresos no pueden ser valores negativos.");
+                            }
+                            break;
+                        case 2:
+                            System.out.println("Ha seleccionado la opcion:  Realizar retiro");
+                            System.out.println("Ingrese monto de retiro");
+                            retiro= read.nextDouble();
+                            if (retiro <=cantidad){
+                                System.out.println("Retiro exitoso");
+                                cantidad-=ingreso;
+                            }else {
+                                System.out.println("Los el monto no puede ser mayor al valor que tiene en la cuenta.");
+                            }
+                            break;
+                        case 3:
+                            System.out.println("Ha seleccionado la opcion: Consultar saldo");
+                            System.out.println( "El valor de la cuenta de "+nombre+" es: "+ cantidad);
+                            break;
+                        default:
+                            System.out.println("Opcion no valida");
+                            break;
+                    }
+                }
+            }
+            </pre>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>Realizar el taller #3 de PSeInt en Java</h3>
+        <p><b>1.</b> Realizar la siguiente figura por medio del ciclo Para</p>
+        <img src="img/T3_1.png" alt="Piramide1">
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio1_taller3;
+
+            import java.util.Scanner;
+            public class Main {
+                private static int i;
+                private static String print1;
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    print1="*";
+                    for (i=0;i<=9;i++){
+                        System.out.println(print1);
+                        print1+="*";
+                    }
+                }
+            }
+            </pre>
+        </div>
+        <p><b>2.</b> Realizar la siguiente figura por medio del ciclo Mientras - Hacer</p>
+        <img src="img/T3_2.png" alt="Piramide2">
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio2_taller3;
+
+            import java.util.Scanner;
+            public class Main {
+                private static int i, j;
+                private static String print1;
+                private static String aste;
+                private static String esp;
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    i=1;
+                    while (i<=10){
+                        esp="";
+                        aste="";
+                        j=1;
+                        while (j<=(10-i)){
+                            esp+=" ";
+                            j+=1;
+                        }
+                        j=1;
+                        while (j<=i){
+                            aste+="*";
+                            j+=1;
+                        }
+                        print1=esp+aste;
+                        System.out.println(print1);
+                        i+=1;
+                    }
+                }
+            }                
+            </pre>
+        </div>
+        <p><b>3.</b> Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</p>
+        <img src="img/T3_3.png" alt="Arbol">
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio3_taller3;
+            import java.util.Scanner;
+            public class Main {
+                private static int i, j, k;
+                private static String print1, aste, esp;
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    i=1;
+                    k=1;
+                    do{
+                        esp="";
+                        aste="";
+                        if(i<=11){
+                            j=1;
+                            do{
+                                if(j==1){
+                                    esp+="";
+                                }else{
+                                    esp+=" ";
+                                }
+                                j+=1;
+                            }while(j<=(12-i));
+                            j=1;
+                            do{
+                                aste+="*";
+                                j+=1;
+                            }while(j<=k);
+                            print1=esp+aste+esp;
+                            System.out.println(print1);
+                        }
+                        k+=2;
+                        if(i==12){
+                            j=1;
+                            do{
+                                if(j==1){
+                                    esp+="";
+                                }else{
+                                    esp+=" ";
+                                }
+                                j+=1;
+                            }while(j <= (10));
+                            j=1;
+                            do {
+                                aste+="*";
+                                j+=1;
+                            }while(j<=3);
+                            print1=esp+aste+esp;
+                            System.out.println(print1);
+                            k=1;
+                        }
+                        if(i>=13){
+                            j=1;
+                            do {
+                                if(j==1){
+                                    esp+="";
+                                }else{
+                                    esp+=" ";
+                                }
+                                j+=1;
+                            }while(j <= (11-(i-12)));
+                            j=1;
+                            do {
+                                aste+="*";
+                                j+=1;
+                            }while(j<=k);
+                            print1=esp+aste+esp;
+                            System.out.println(print1);
+                        }
+                        i+=1;
+                    }while(i<=16);
+                }
+            }
+            </pre>
+        </div>
+        <p><b>4.</b> Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:</p>
+        <img src="img/T3_4.png" alt="Tabla de multiplicar">
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio4_taller3;
+
+            import java.util.Scanner;
+            public class Main {
+                private static int i,n;
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    System.out.println("Ingresen el numero");
+                    n=read.nextInt();
+                    for (i=0;i<10;i++){
+                        System.out.println((i+1)+" x "+n+" = "+n*(i+1));
+                    }
+                }
+            }
+            </pre>
+        </div>
+        <p><b>5.</b> Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.</p>
+        <img src="img/T3_5.png" alt="Menu de ususario">
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio5_taller3;
+
+            import java.util.Scanner;
+            public class Main {
+                private static int opcion,n;
+                private static String nombre, aux;
+                public static void main(String[] args){
+                    Scanner read = new Scanner(System.in);
+                    do{
+                        System.out.println("Menu de usuario");
+                        System.out.println("1: Capturar nombre");
+                        System.out.println("2: Saludar persona");
+                        System.out.println("3: Salir del sistema");
+                        opcion=read.nextInt();
+                        read.nextLine();
+                        switch (opcion){
+                            case 1:
+                                System.out.println("Ingrese nombre");
+                                nombre=read.nextLine();
+                                break;
+                            case 2:
+                                System.out.println("Un saludo a "+nombre);
+                                System.out.println("(presione enter para continuar)");
+                                aux= read.nextLine();
+                                break;
+                            case 3:
+                                System.out.println("Adios!");
+                                break;
+                            default:
+                                System.out.println("Opcion no valida");
+                        }
+                    }while(opcion!=3);
+                }
+            }                
+            </pre>
+        </div>
+        <p><b>6.</b> Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio6_taller3;
+
+            import java.util.Scanner;
+            public class Main {
+                private static int opcion;
+                private static int i;
+                private static String aux;
+                private static String nombre[]= new String[3];
+                private static String tel[]= new String[3];
+                private static String org[]= new String[3];
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    for (i=0;i<3;i++){
+                        nombre[i]="";
+                        tel[i]="";
+                        org[i]="";
+                    }
+                    do{
+                        System.out.println("Menu de usuario");
+                        System.out.println("1: Ingresar contacto");
+                        System.out.println("2: Buscar contacto");
+                        System.out.println("3: Eliminar contacto");
+                        System.out.println("4: Salir del sistema");
+                        opcion=read.nextInt();
+                        read.nextLine();
+                        switch (opcion){
+                            case 1:
+                                if(tel[0]!="" && tel[1]!="" && tel[2]!=""){
+                                    System.out.println("Numero total de usuarios excedido, para ingresar un nuevo usuario primero elimine uno");
+                                    System.out.println("Presione enter para continuar");
+                                    aux=read.nextLine();
+                                }else{
+                                    System.out.println("Ingrese el numero del contacto (ejm: 3123456789)");
+                                    aux=read.nextLine();
+                                    for (i=0;i<=2;i++){
+                                        if(tel[i].equals(aux)){
+                                            System.out.println("Contacto ya existente");
+                                            System.out.println("Presione enter para continuar");
+                                            aux= read.nextLine();
+                                            i=4;
+                                        }
+                                    }
+                                    if (i==3){
+                                        for (i=0;i<=2;i++){
+                                            if (tel[i].equals("")){
+                                                tel[i]=aux;
+                                                System.out.println("ingrese el nombre del contacto");
+                                                nombre[i]= read.nextLine();
+                                                System.out.println("Ingrese la organizacion del contacto (ejm: sofka)");
+                                                org[i]= read.nextLine();
+                                                i=4;
+                                            }
+                                        }
+                                    }
+                                }
+                                break;
+                            case 2:
+                                System.out.println("Ingrese el nombre del contacto");
+                                aux= read.nextLine();
+                                for(i=0;i<=2;i++){
+                                    if (nombre[i].equals(aux)){
+                                        System.out.println("Contacto: "+nombre[i]+" Telefono: "+tel[i]+ " Organizacion: "+org[i]);
+                                        System.out.println("Ingrese enter para continuar");
+                                        aux= read.nextLine();
+                                        i=4;
+                                    }
+                                }
+                                if (i==3){
+                                    System.out.println("Contacto inexistente por favor intente nuevamente (Presione enter para continuar)");
+                                    aux= read.nextLine();
+                                }
+                                break;
+                            case 3:
+                                System.out.println("Seleccione el contacto a eliminar:");
+                                for (i=0;i<=2;i++){
+                                    System.out.println((i+1)+": "+nombre[i]);
+                                }
+                                opcion= read.nextInt();
+                                read.nextLine();
+                                if(opcion==1 || opcion==2 || opcion==3 ){
+                                    nombre[opcion-1]="";
+                                    tel[opcion-1]="";
+                                    org[opcion-1]="";
+                                }else{
+                                    System.out.println("Opcion no válida (presione enter para continuar)");
+                                    aux= read.nextLine();
+                                }
+                                break;
+                            case 4:
+                                System.out.println("Adios!");
+                                break;
+                            default:
+                                System.out.println("Opcion no valida (presione enter para continuar)");
+                                aux=read.nextLine();
+                                break;
+                        }
+            
+                    }while (opcion!=4);
+                }
+            }
+            </pre>
+        </div>
+        <p><b>7.</b> El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio7_taller3;
+
+            import java.util.Scanner;
+            public class Main {
+                private static int opcion;
+                private static int i;
+                private static String aux;
+                private static String placa[]= new String[4];
+                private static String marca[]= new String[4];
+                private static String nombre[]= new String[4];
+                private static String tel[]= new String[4];
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    for (i=0;i<4;i++){
+                        nombre[i]="";
+                        tel[i]="";
+                        marca[i]="";
+                        placa[i]="";
+                    }
+                    do{
+                        System.out.println("Menu de usuario");
+                        System.out.println("1: Ingresar auto");
+                        System.out.println("2: Consultar auto");
+                        System.out.println("3: Retirar auto");
+                        System.out.println("4: Salir del sistema");
+                        opcion=read.nextInt();
+                        read.nextLine();
+                        switch (opcion){
+                            case 1:
+                                if(placa[0]!="" && placa[1]!="" && placa[2]!="" && placa[3]!=""){
+                                    System.out.println("Numero total de autos excedido, para ingresar un nuevo auto primero retire uno");
+                                    System.out.println("Presione enter para continuar");
+                                    aux=read.nextLine();
+                                }else{
+                                    System.out.println("Ingrese la placa del vehiculo (ejm: ABC123)");
+                                    aux=read.nextLine();
+                                    for (i=0;i<=3;i++){
+                                        if(placa[i].equals(aux)){
+                                            System.out.println("vehiculo ya registrado");
+                                            System.out.println("Presione enter para continuar");
+                                            aux= read.nextLine();
+                                            i=5;
+                                        }
+                                    }
+                                    if (i==4){
+                                        for (i=0;i<=3;i++){
+                                            if (placa[i].equals("")){
+                                                placa[i]=aux;
+                                                System.out.println("Ingrese la marca del vehiculo (ejm: renault)");
+                                                marca[i]= read.nextLine();
+                                                System.out.println("Ingrese nombre completo del dueno del vehiculo");
+                                                nombre[i]= read.nextLine();
+                                                System.out.println("Ingrese el telefono del dueno del vehiculo (ejm: 3123456789)");
+                                                tel[i]= read.nextLine();
+                                                i=5;
+                                            }
+                                        }
+                                    }
+                                }
+                                break;
+                            case 2:
+                                System.out.println("Ingrese placa del vehiculo");
+                                aux= read.nextLine();
+                                for(i=0;i<=3;i++){
+                                    if (placa[i].equals(aux)){
+                                        System.out.println("Contacto: "+nombre[i]+", Telefono: "+tel[i]+ ", Placa: "+placa[i]+", Marca: "+marca[i]);
+                                        System.out.println("Ingrese enter para continuar");
+                                        aux= read.nextLine();
+                                        i=5;
+                                    }
+                                }
+                                if (i==4){
+                                    System.out.println("Vehiculo no registrado por favor intente nuevamente (Presione enter para continuar)");
+                                    aux= read.nextLine();
+                                }
+                                break;
+                            case 3:
+                                System.out.println("Seleccione el vehiculo a retirar:");
+                                for (i=0;i<=3;i++){
+                                    System.out.println((i+1)+": "+placa[i]+", "+marca[i]);
+                                }
+                                opcion= read.nextInt();
+                                read.nextLine();
+                                if(opcion==1 || opcion==2 || opcion==3 || opcion==4 ){
+                                    marca[opcion-1]="";
+                                    placa[opcion-1]="";
+                                    tel[opcion-1]="";
+                                    nombre[opcion-1]="";
+                                }else{
+                                    System.out.println("Opcion no valida (presione enter para continuar)");
+                                    aux= read.nextLine();
+                                }
+                                opcion=0;
+                                break;
+                            case 4:
+                                System.out.println("Adios!");
+                                break;
+                            default:
+                                System.out.println("Opcion no valida (presione enter para continuar)");
+                                aux=read.nextLine();
+                                break;
+                        }
+                    }while (opcion!=4);
+                }
+            }
+            </pre>
+        </div>
+        <p><b>8.</b> La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio8_taller3;
+
+            import java.util.Scanner;
+            public class Main {
+                private static int opcion;
+                private static int i;
+                private static String aux;
+                private static String nombre[]= new String[8];
+                private static String nota[]= new String[8];
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    for (i=0;i<8;i++){
+                        nombre[i]="";
+                        nota[i]="";
+                    }
+                    do{
+                        System.out.println("Menu de usuario");
+                        System.out.println("1: Ingresar usuario");
+                        System.out.println("2: Ingresar resultados");
+                        System.out.println("3: Consultar usuarios que presentaron el curso");
+                        System.out.println("4: Salir del sistema");
+                        opcion=read.nextInt();
+                        read.nextLine();
+                        switch (opcion){
+                            case 1:
+                                if(nombre[0]!="" && nombre[1]!="" && nombre[2]!="" && nombre[3]!=""
+                                 && nombre[4]!="" && nombre[5]!="" && nombre[6]!="" && nombre[7]!="" ){
+                                    System.out.println("Número total de alumnos excedido");
+                                    System.out.println("Presione enter para continuar");
+                                    aux=read.nextLine();
+                                }else{
+                                    System.out.println("Ingrese el nombre del alumno");
+                                    aux=read.nextLine();
+                                    for (i=0;i<=7;i++){
+                                        if(nombre[i].equals(aux)){
+                                            System.out.println("Alumno ya registrado");
+                                            System.out.println("Presione enter para continuar");
+                                            aux= read.nextLine();
+                                            i=9;
+                                        }
+                                    }
+                                    if (i==8){
+                                        for (i=0;i<=7;i++){
+                                            if (nombre[i].equals("")){
+                                                nombre[i]=aux;
+                                                i=9;
+                                            }
+                                        }
+                                    }
+                                }
+                                break;
+                            case 2:
+                                System.out.println("Seleccione el alumno a calificar:");
+                                for (i=0;i<=7;i++){
+                                    System.out.println((i+1)+": "+nombre[i]+", "+nota[i]);
+                                }
+                                opcion= read.nextInt();
+                                read.nextLine();
+                                if(opcion==1 || opcion==2 || opcion==3 || opcion==4 || opcion==5 || opcion==6 || opcion==7 || opcion==8){
+                                    System.out.println("Ingrese la calificacion del usuario (APROBADO o REPROBADO)");
+                                    nota[opcion-1]=read.nextLine();
+                                }else{
+                                    System.out.println("Opcion no valida (presione enter para continuar)");
+                                    aux= read.nextLine();
+                                }
+                                opcion=0;
+                                break;
+                            case 3:
+                                System.out.println("Estudiantes y resultados del curso de conduccion");
+                                for(i=0;i<=7;i++){
+                                    System.out.println("Estudiante: "+nombre[i]+" ha sido inscrito al curso y obtuvo un resultado de:  "+nota[i]);
+                                }
+                                System.out.println("Ingrese enter para continuar");
+                                aux= read.nextLine();
+                                break;
+                            case 4:
+                                System.out.println("Adios!");
+                                break;
+                            default:
+                                System.out.println("Opcion no valida (presione enter para continuar)");
+                                aux=read.nextLine();
+                                break;
+                        }
+                    }while (opcion!=4);
+                }
+            }
+            </pre>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>Realizar el taller #4 de PSeInt en Java</h3>
+        <p><b>1.</b> Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:</p>
+            <ul>
+                <li>[0] = 55</li>
+                <li>[1] = 99</li>
+                <li>[2] = 11</li>
+                <li>[3] = 56</li>
+                <li>[4] = 69</li>
+            </ul> 
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio1_taller4;
+
+            import java.util.Scanner;
+            public class Main {
+                private static int i;
+                private static int arreglo[]=new int[5];
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    for(i=0;i<=4;i++){
+                        System.out.println("Ingrese el dato "+(i+1));
+                        arreglo[i]= read.nextInt();
+                    }
+                    for (i=0;i<=4;i++){
+                        System.out.println("["+i+"] = "+arreglo[i]);
+                    }
+                }
+            }
+            </pre>
+        </div>
+        <p><b>2.</b> Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo</p>
+        <ul>
+            <li>Números pares: 2, 4, 6, 8, 10</li>
+            <li>Números impares: 1, 3, 5, 7, 9</li>
+        </ul> 
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio2_taller4;
+
+            import java.util.Scanner;
+            public class Main {
+                private static int i, j, aux;
+                private static int arreglo[]=new int[20];
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    i=0;
+                    while(i<=19){
+                        System.out.println("Ingrese el dato "+(i+1));
+                        arreglo[i]=read.nextInt();
+                        i+=1;
+                    }
+                    i=0;
+                    System.out.print("Numeros pares: ");
+                    for (i=0;i<=19;i++){
+                        j=arreglo[i];
+                        aux=0;
+                        if (arreglo[i]!=0){
+                            if(arreglo[i]%2==0){
+                                System.out.print(arreglo[i]+" ");
+                            }
+                        }
+                    }
+                    System.out.println(" ");
+                    System.out.print("Numeros impares: ");
+                    for (i=0;i<=19;i++){
+                        j=arreglo[i];
+                        aux=0;
+                        if (arreglo[i]!=0){
+                            if(arreglo[i]%2!=0){
+                                System.out.print(arreglo[i]+" ");
+                            }
+                        }
+                    }
+                    System.out.println(" ");
+                }
+            }
+            </pre>
+        </div>
+        <p><b>3.</b> Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio3_taller4;
+
+            import java.util.Scanner;
+            public class Main {
+                private static int i, j, k, aux, aux2, n;
+                private static int primos[]=new int[1000];
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    k=0;
+                    n=0;
+                    j=2;
+                    for(i=0;i<=999;i++){
+                        aux=0;
+                        aux2=j;
+                        while(aux<2 || aux2>0){
+                            if (j%aux2==0){
+                                aux+=1;
+                            }
+                            aux2-=1;
+                        }
+                        if(aux==2){
+                            n++;
+                            primos[k]=j;
+                            k++;
+                        }
+                        j++;
+                    }
+                    for (i=0;i<n;i++){
+                        System.out.print( primos[i]+", ");
+                    }
+                }
+            }                
+            </pre>
+        </div>
+        <p><b>4.</b> Dada la siguiente matriz bidimensional, el cual debe de quemar en el código</p>
+        <ul>
+            <li>01 02 03 04 05</li>
+            <li>06 07 08 09 10</li>
+            <li>11 12 13 14 15</li>
+            <li>16 17 18 19 20</li>
+        </ul> 
+        <p>Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.</p>
+        <ul>
+            <li>01 02 03 04 05</li>
+            <li>10 09 08 07 06</li>
+            <li>11 12 13 14 15</li>
+            <li>20 19 18 17 16</li>
+        </ul> 
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio4_taller4;
+
+            import java.util.Scanner;
+            public class Main {
+                private static int i, j, k, aux, aux2, n;
+                private static String mat[][]=new String[4][5];
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    mat[0][0]="01";
+                    mat[0][1]="02";
+                    mat[0][2]="03";
+                    mat[0][3]="04";
+                    mat[0][4]="05";
+                    mat[1][0]="06";
+                    mat[1][1]="07";
+                    mat[1][2]="08";
+                    mat[1][3]="09";
+                    mat[1][4]="10";
+                    mat[2][0]="11";
+                    mat[2][1]="12";
+                    mat[2][2]="13";
+                    mat[2][3]="14";
+                    mat[2][4]="15";
+                    mat[3][0]="16";
+                    mat[3][1]="17";
+                    mat[3][2]="18";
+                    mat[3][3]="19";
+                    mat[3][4]="20";
+                    for (i=0;i<=2;i+=2){
+                        for (j=0;j<=4;j++){
+                            System.out.print(mat[i][j]+" ");
+                        }
+                        System.out.println(" ");
+                        for (j=4;j>=0;j--){
+                            System.out.print(mat[i+1][j]+" ");
+                        }
+                        System.out.println(" ");
+                    }
+                }
+            }     
+            </pre>
+        </div>
+        <p><b>5.</b> Se debe de imprimir el siguiente cuadro</p>
+        <img src="img/T4_5.png" alt="Tablas">
+        <p>El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario</p>
+        <div class="codigoContainer">
+            <pre>
+            package ejercicio5_taller4;
+            import java.util.Scanner;
+            public class Main {
+                private static int i, j, f, c;
+                private static int mat[][]=new int[10][10];
+                private static String filas[]=new String[5];
+                public static void main(String[] args) {
+                    Scanner read = new Scanner(System.in);
+                    filas[0]="f";
+                    filas[1]="i";
+                    filas[2]="l";
+                    filas[3]="a";
+                    filas[4]="s";
+                    for (i=0;i<=9;i++){
+                        for (j=0;j<=9;j++){
+                            mat[i][j]=(i+1)*(j+1);
+                        }
+                    }
+                    System.out.println("Ingrese la fila u columna de la cual desea ver el resultado: ");
+                    System.out.println("");
+                    System.out.println("                         columnas");
+                    for (i=0;i<=9;i++){
+                        if (i==0){
+                            System.out.print("           ");
+                            for(j=0;j<=9;j++){
+                                System.out.print(j+"     ");
+                            }
+                            System.out.println("");
+                        }
+                        if(i>=2 && i<=6){
+                            System.out.print(" "+filas[i-2]+"  "+i+"     ");
+                        }
+                        else{
+                            System.out.print( "    "+i+"     ");
+                        }
+                        if(i<=8){
+                            for (j=0;j<=9;j++){
+                                System.out.print((i+1)+"x"+(j+1)+"   ");
+                            }
+                        }else {
+                            for (j=0;j<=9;j++){
+                                System.out.print((i+1)+"x"+(j+1)+"  ");
+                            }
+                        }
+                        System.out.println("");
+                    }
+                    System.out.println("Ingrese numero de la fila ");
+                    f= read.nextInt();
+                    System.out.println("Ingrese numero de la fila ");
+                    c= read.nextInt();
+                    System.out.println("el resultado de "+(c+1)+"x"+(f+1)+ " es: "+  mat[f][c]);
+                }
+            }
+            </pre>
+        </div>
+    </div>
+    
+</body>
+
+</html>

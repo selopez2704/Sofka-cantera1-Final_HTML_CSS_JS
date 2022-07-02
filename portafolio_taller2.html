@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/main.js"></script>
+    <title>Portafolio</title>
+</head>
+<body class="portafolio"onload="main()">
+    <div class="top-banner">
+        <h1>Portafolio de ejercicios taller final HTML-CSS-JS</h1>
+    </div>
+    <div id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="index.html">Formulario de contacto</a>
+            </li>
+            <li>
+                <a href="lista.html">Lista de frutas</a>
+            </li>
+            <li>
+                <a href="portafolio_taller1.html">Portafolio de talleres</a>
+            </li>
+        </ul>
+    </div>
+    <div id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="portafolio_taller1.html">Impresión</a>
+            </li>
+            <li>
+                <a href="portafolio_taller2.html">Condicionales</a>
+            </li>
+            <li>
+                <a href="portafolio_taller3.html">Ciclos</a>
+            </li>
+            <li>
+                <a href="portafolio_taller4.html">Arreglos</a>
+            </li>
+            <li>
+                <a href="portafolio_taller5.html">Funciones</a>
+            </li>
+            <li>
+                <a href="portafolio_tallerJava.html">Java</a>
+            </li>
+            <li>
+                <a href="cv/index.html">Hoja de Vida</a>
+            </li>
+        </ul>
+    </div>
+    <!-- contenido -->
+    <div class="portafolioContainer">
+        <h2 class="center">Taller de condicionales 🤔</h2>
+
+        <h3>Video</h3>
+        <iframe  width="400" height="250" src="https://www.youtube.com/embed/cfPfpGbkodA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <br>
+        <h3>Ejercicios:</h3>    
+        <p><b>1.</b> Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio1_taller2_semana1_cantera1
+                    Definir Edad Como Real;
+                    Escribir "Ingrese su edad (ejm: 13)";
+                    Leer Edad;
+                    Si Edad >= 18 Entonces
+                        Escribir "Usted es mayor de edad";
+                    FinSi
+                FinProceso
+
+            </pre>
+        </div>
+        <p><b>2.</b> Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio2_taller2_semana1_cantera1
+                    Definir Edad Como Real;
+                    Escribir "Ingrese su edad (ejm: 13)";
+                    Leer Edad;
+                    Si Edad < 18 Entonces
+                        Escribir "Usted aún es un niño(a).";
+                    FinSi
+                FinProceso
+            </pre>
+        </div>
+        <p><b>3.</b> Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio3_taller2_semana1_cantera1
+                    Definir Nombre como caracter;
+                    Definir Apellidos Como Caracter;
+                    Definir Edad Como Real;
+                    Escribir "Ingrese su nombre ";
+                    Leer Nombre;
+                    Escribir "Ingrese sus apellidos separado por un espacio en blanco ";
+                    Leer Apellidos;
+                    Escribir "Ingrese su edad (ejm: 12)";
+                    Leer Edad;
+                    Si Edad >= 18 Entonces
+                        Escribir Nombre," ",Apellidos," usted es mayor de edad, por lo tanto puede entrar a la fiesta.";
+                    SiNo
+                        Escribir Nombre," ",Apellidos," usted es menor de edad, por lo tanto, no puede entrar 
+                        a la fiesta, por favor devuélvase a su casa.";;
+                    FinSi
+                FinProceso
+            </pre>
+        </div>
+        <p><b>4.</b> La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio4_taller2_semana1_cantera1
+                    definir Opcion Como Real;
+                    Definir AnotacionSN Como real;
+                    Definir Anotacion Como Caracter;
+                    Escribir "Ingrese el número correspondiente a la opcion que quiere realizar: ";
+                    Escribir "1: Alquilar pelicula";
+                    Escribir "2: Consultar películas disponibles";
+                    Escribir "3: Recibir pelicula";
+                    Leer Opcion;
+                    Segun Opcion Hacer
+                        1:
+                            Escribir "Ha seleccionado la opcion: Alquilar pelicula";
+                        2:
+                            Escribir "Ha seleccionado la opcion: Consultar películas disponibles";
+                        3:
+                            Escribir "Ha seleccionado la opcion Recibir pelicula";
+                            Escribir "Desea realizar una anotación [Si:1  /  No:2]";
+                            Leer AnotacionSN;
+                            Segun AnotacionSN Hacer
+                                1:
+                                    Escribir "Ingrese anotación";
+                                    Leer Anotacion;
+                                2:
+                                    Escribir "";
+                                De Otro Modo:
+                                    Escribir "Opcion no válida";
+                            FinSegun			
+                        De Otro Modo:
+                            Escribir "No ha seleccionado una opcion válida";
+                    FinSegun
+                FinProceso
+            </pre>
+        </div>
+        <p><b>5.</b> La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</p>
+        <div class="codigoContainer">
+            <pre>
+            Proceso Ejercicio5_taller1_semana1_cantera1
+                Definir NomMasc Como Caracter;
+                Definir EdadMasc Como entero;
+                Definir TipoMasc Como Caracter;
+                Definir NomComDueno Como Caracter;
+                Escribir "Ingrese el nombre de su mascota";
+                Leer NomMasc;
+                Escribir "Ingrese el la edad en años de su mascota (ejm: 3)";
+                Leer EdadMasc;
+                Escribir "Ingrese el tipo de mascota";
+                Leer TipoMasc;
+                Escribir "Ingrese su nombre completo";
+                Leer NomComDueno;
+                Escribir NomMasc," es un(a) ", TipoMasc ,", el cual, tiene ",EdadMasc ," años de edad
+                  y " ,NomComDueno , " es actualmente su dueño(a).";
+            FinProceso
+            </pre>
+        </div>
+        <p><b>6.</b> El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio6_taller2_semana1_cantera1
+                    definir Opcion Como Real;
+                    Definir Observaciones Como caracter;
+                    Definir Novedades Como Caracter;
+                    Definir Arreglos Como Caracter;
+                    Escribir "Ingrese el número correspondiente a la opcion que quiere realizar: ";
+                    Escribir "1: Registrar ingreso de motocicleta";
+                    Escribir "2: Registrar salida de motococleta";
+                    Escribir "3: Registrar arreglos realizados";
+                    Leer Opcion;
+                    Segun Opcion Hacer
+                        1:
+                            Escribir "Ha seleccionado la opcion: ingreso de motocicleta";
+                            Escribir "Ingrese las observaciones del cliente";
+                            Leer Observaciones;
+                        2:
+                            Escribir "Ha seleccionado la opcion: salida de motococleta";
+                            Escribir "Ingrese novedades del mécanico";
+                            Leer Novedades;
+                        3:
+                            Escribir "Ha seleccionado la opcion: salida de motococleta";
+                            Escribir "Ingrese los arreglos hechos por el mecánico";
+                            Leer Arreglos;
+                        De Otro Modo:
+                            Escribir "No ha seleccionado una opcion válida";
+                    FinSegun
+                FinProceso
+            </pre>
+        </div>
+        <p><b>7.</b> La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio7_taller2_semana1_cantera1
+                    //Para la realizacion del calculo del incice IMC se investigó en:
+                    // centros para el control y prevenccion de enfermedades
+                    
+                    definir Peso Como Real;
+                    Definir Estatura Como Real;
+                    Definir IMC Como Real;
+                    
+                    Escribir "Ingrese su peso en kilogramos (ejm: 80, 71.1, etc)";
+                    Leer Peso;
+                    Escribir "Ingrese su estatura en metros (ejm: 1,90)";
+                    Leer Estatura;
+                    IMC<-Peso/(Estatura^2);
+                    si IMC < 18.5 Entonces
+                        Escribir "Su rango es BAJO PESO";
+                    SiNo
+                        si IMC >= 18.5 Y IMC <= 24.9 Entonces
+                            Escribir "Su rango es NORMAL";
+                        SiNo
+                            si IMC >= 24.9 Y IMC <= 29.9 Entonces
+                                Escribir "Su rango es SOBREPESO";
+                            SiNo
+                                si IMC >= 29.9 Entonces
+                                    Escribir "Su rango es OBESO";
+                                FinSi
+                            FinSi
+                        FinSi
+                    FinSi
+                FinProceso
+            </pre>
+        </div>
+        <p><b>8.</b> El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio8_taller2_semana1_cantera1
+        
+                    definir Porciones Como entero;
+                    Definir Sabor Como caracter;
+                    Definir Decoraciones Como caracter;
+                    Definir Venta Como real;
+                    Definir Opcion como entero;
+                    Escribir "Ingrese el número correspondiente a la opcion que quiere realizar: ";
+                    Escribir "1: Registrar pedido";
+                    Escribir "2: Registrar tortas disponibles";
+                    Escribir "3: Registrar ventas";
+                    Leer Opcion;
+                    Segun Opcion Hacer
+                        1:
+                            Escribir "Ha seleccionado la opcion: Registrar pedido";
+                            Escribir "Ingrese las especificaciones de la torta";
+                            Escribir "Ingrese Numero de porciones (ejm: 8)";
+                            Leer Porciones;
+                            Escribir "Ingrese el sabor de la torta";
+                            Leer Sabor;
+                            Escribir "Ingrese las decoraciones de la torta";
+                            Leer Decoraciones;
+                        2:
+                            Escribir "Ha seleccionado la opcion: Registrar tortas disponibles";
+                            Escribir "Ingrese las especificaciones de la torta";
+                            Escribir "Ingrese Numero de porciones (ejm: 8)";
+                            Leer Porciones;
+                            Escribir "Ingrese el sabor de la torta";
+                            Leer Sabor;
+                            Escribir "Ingrese las decoraciones de la torta";
+                            Leer Decoraciones;
+                        3:
+                            Escribir "Ha seleccionado la opcion: Registrar ventas";
+                            Escribir "Ingrese la venta (ejm: 50000)";
+                            Leer Venta;
+                        De Otro Modo:
+                            Escribir "No ha seleccionado una opcion válida";
+                    FinSegun
+                FinProceso
+            </pre>
+        </div>
+        <p><b>9.</b> El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio9_taller2_semana1_cantera1
+                    definir var1 Como real;
+                    Definir var2 Como real;
+                    Definir var3 Como real;
+                    Definir area Como real;
+                    Definir Opcion como entero;
+                    
+                    Escribir "Ingrese el número correspondiente a la opcion que quiere realizar: ";
+                    Escribir "1: Calcular el área de un rectángulo";
+                    Escribir "2: Calcular el área de un triángulo";
+                    Escribir "3: Calcular el área de un Trapecio";
+                    Leer Opcion;
+                    Segun Opcion Hacer
+                        1:
+                            Escribir "Ha seleccionado la opcion: Calcular el área de un rectángulo";
+                            Escribir "Ingrese la longitud del lado A (ejm: 25)";
+                            Leer var1;
+                            Escribir "Ingrese la longitud del lado B (ejm: 20)";
+                            Leer var2;
+                            area<-var1*var2;
+                            Escribir "El area de retangulo es: ", area;
+                        2:
+                            Escribir "Ha seleccionado la opcion: Calcular el área de un triángulo";
+                            Escribir "Ingrese la longitud de la base (ejm: 40)";
+                            Leer var1;
+                            Escribir "Ingrese la altura (ejm: 18)";
+                            Leer var2;
+                            area<-(var1*var2)/2;
+                            Escribir "El area del triangulo es: ", area;
+                        3:
+                            Escribir "Ha seleccionado la opcion: Calcular el área de un Trapecio";
+                            Escribir "Ingrese la longitud de la base inferior (ejm: 40)";
+                            Leer var1;
+                            Escribir "Ingrese la longitud de la base superior (ejm: 18)";
+                            Leer var2;
+                            Escribir "Ingrese la altura (ejm: 15)";
+                            Leer var3;
+                            area<-((var1+var2)/2)*var3;
+                            Escribir "El area del trapecio es: ", area;
+                        De Otro Modo:
+                            Escribir "No ha seleccionado una opcion válida";
+                    FinSegun
+                FinProceso
+            </pre>
+        </div>
+        <p><b>10.</b> El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio10_taller2_semana1_cantera1
+                    definir Titular Como caracter;
+                    Definir cantidad Como real;
+                    Definir Aux Como real;
+                    Definir Opcion como entero;
+                    
+                    Escribir "Ingrese el nombre del titular de la cuenta";
+                    Leer Titular;
+                    Escribir "Ingrese la cantidad";
+                    Leer cantidad;
+                    
+                    Escribir "Ingrese el número correspondiente a la opcion que quiere realizar: ";
+                    Escribir "1: Realizar ingreso";
+                    Escribir "2: Realizar retiro";
+                    Escribir "3: Consultar saldo";
+                    Leer Opcion;
+                    Segun Opcion Hacer
+                        1:
+                            Escribir "Ha seleccionado la opcion: Realizar ingreso.";
+                            Escribir "Ingrese monto de ingreso";
+                            Leer aux;
+                            si aux>0 Entonces
+                                Escribir "Ingreso exitoso.";
+                            SiNo
+                                Escribir "Los ingresos no pueden ser valores negativos.";
+                            FinSi
+                        2:
+                            Escribir "Ha seleccionado la opcion:  Realizar retiro";
+                            Escribir "Ingrese monto de retiro";
+                            Leer aux;
+                            si aux<=cantidad Entonces
+                                Escribir "Retiro exitoso.";
+                            SiNo
+                                Escribir "Los el monto no puede ser mayor al valor que tiene en la cuenta.";
+                            FinSi
+                        3:
+                            Escribir "Ha seleccionado la opcion: Consultar saldo";
+                            Escribir "El valor de su cuenta es: ", cantidad;
+                        De Otro Modo:
+                            Escribir "No ha seleccionado una opcion válida";
+                    FinSegun
+                FinProceso
+            </pre>
+        </div>
+    </div>
+</body>
+
+</html>

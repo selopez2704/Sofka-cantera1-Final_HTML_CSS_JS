@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/main.js"></script>
+    <title>Portafolio</title>
+</head>
+<body class="portafolio"onload="main()">
+    <div class="top-banner">
+        <h1>Portafolio de ejercicios taller final HTML-CSS-JS</h1>
+    </div>
+    <div id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="index.html">Formulario de contacto</a>
+            </li>
+            <li>
+                <a href="lista.html">Lista de frutas</a>
+            </li>
+            <li>
+                <a href="portafolio_taller1.html">Portafolio de talleres</a>
+            </li>
+        </ul>
+    </div>
+    <div id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="portafolio_taller1.html">Impresión</a>
+            </li>
+            <li>
+                <a href="portafolio_taller2.html">Condicionales</a>
+            </li>
+            <li>
+                <a href="portafolio_taller3.html">Ciclos</a>
+            </li>
+            <li>
+                <a href="portafolio_taller4.html">Arreglos</a>
+            </li>
+            <li>
+                <a href="portafolio_taller5.html">Funciones</a>
+            </li>
+            <li>
+                <a href="portafolio_tallerJava.html">Java</a>
+            </li>
+            <li>
+                <a href="cv/index.html">Hoja de Vida</a>
+            </li>
+        </ul>
+    </div>
+    <!-- contenido -->
+    <div class="portafolioContainer">
+        <h2 class="center">Taller de funciones 🦾</h2>
+        
+        <h3>Organizar todos los puntos del taller de condicionales en modo funciones.</h3>    
+        <br>
+        <p><b>1 y 2.</b><br> Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad. <br><br> Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</p>
+        <div class="codigoContainer">
+            <pre>
+                SubProceso MensajeEdad()
+                    Definir edad Como Real;
+                    Leer Edad;
+                    Si Edad >= 18 Entonces
+                        Escribir "Usted es mayor de edad";
+                    SiNo
+                        Escribir "Usted aún es un niño(a).";
+                    FinSi
+                FinSubProceso
+                Proceso Ejercicio1_1y2_taller2_semana2_cantera1
+                    Definir Edad Como Real;
+                    Escribir "Ingrese su edad (ejm: 13)";
+                    MensajeEdad();
+                FinProceso
+            </pre>
+        </div>
+        <p><b>3.</b> Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</p>
+        <div class="codigoContainer">
+            <pre>
+                SubProceso MensajeEdad(Nombre,Apellidos,Edad)
+                    Si Edad >= 18 Entonces
+                        Escribir Nombre," ",Apellidos," usted es mayor de edad, por lo tanto puede entrar a la fiesta.";
+                    SiNo
+                        Escribir Nombre," ",Apellidos," usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.";;
+                    FinSi
+                FinSubProceso
+                Proceso Ejercicio1_3_taller2_semana2_cantera1
+                    Definir Nombre, Apellidos como caracter;
+                    Definir Edad Como Real;
+                    Escribir "Ingrese su nombre ";
+                    Leer Nombre;
+                    Escribir "Ingrese sus apellidos separado por un espacio en blanco ";
+                    Leer Apellidos;
+                    Escribir "Ingrese su edad (ejm: 12)";
+                    Leer Edad;
+                    MensajeEdad(Nombre,Apellidos,Edad);
+                FinProceso
+            </pre>
+        </div>
+        <p><b>4.</b> La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</p>
+        <div class="codigoContainer">
+            <pre>
+                SubProceso Alquiler()
+                    Escribir "Ha seleccionado la opcion: Alquilar pelicula";
+                FinSubProceso
+                SubProceso consulta()
+                    Escribir "Ha seleccionado la opcion: Consultar películas disponibles";
+                FinSubProceso
+                SubProceso recibo()
+                    Definir AnotacionSN Como real;
+                    Definir Anotacion Como Caracter;
+                    Escribir "Ha seleccionado la opcion Recibir pelicula";
+                    Escribir "Desea realizar una anotación [Si:1  /  No:2]";
+                    Leer AnotacionSN;
+                    Segun AnotacionSN Hacer
+                        1:
+                            Escribir "Ingrese anotación";
+                            Leer Anotacion;
+                        2:
+                            Escribir "";
+                        De Otro Modo:
+                            Escribir "Opcion no válida";
+                    FinSegun
+                FinSubProceso
+
+                SubProceso Peliculas(Opcion)
+                    Segun Opcion Hacer
+                        1:
+                            alquiler();
+                        2:
+                            consulta();
+                        3:
+                            recibo();
+                        De Otro Modo:
+                            Escribir "No ha seleccionado una opcion válida";
+                    FinSegun
+                    
+                FinSubProceso
+                Proceso Ejercicio1_4_taller2_semana2_cantera1
+                    definir Opcion Como Real;	
+                    Escribir "Ingrese el número correspondiente a la opcion que quiere realizar: ";
+                    Escribir "1: Alquilar pelicula";
+                    Escribir "2: Consultar películas disponibles";
+                    Escribir "3: Recibir pelicula";
+                    Leer Opcion;
+                    Peliculas(Opcion);
+                FinProceso
+            </pre>
+        </div>
+        <p><b>5.</b> La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</p>
+        <div class="codigoContainer">
+            <pre>
+            SubProceso Comprar()
+                Escribir "Ha seleccionado la opcion: Compra de producto";
+            FinSubProceso
+            SubProceso consulta()
+                Escribir "Ha seleccionado la opcion: Consulta de precios por producto";
+            FinSubProceso
+            SubProceso Devolucion()
+                Escribir "Ha seleccionado la opcion: Devoluciones";
+            FinSubProceso
+            
+            SubProceso farmacia(Opcion)
+                
+                Segun Opcion Hacer
+                    1:
+                        Comprar();
+                    2:
+                        consulta();
+                    3:
+                        Devolucion();
+                    De Otro Modo:
+                        Escribir "No ha seleccionado una opcion válida";
+                FinSegun
+                
+            FinSubProceso
+            Proceso Ejercicio1_5_taller2_semana2_cantera1
+                definir Opcion Como Real;
+                Escribir "Ingrese el número correspondiente a la opcion que quiere realizar: ";
+                Escribir "1: Compra de producto";
+                Escribir "2: Consulta de precios por producto";
+                Escribir "3: Devoluciones";
+                Leer Opcion;
+                farmacia(Opcion);
+            FinProceso
+            </pre>
+        </div>
+        <p><b>6.</b> El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</p>
+        <div class="codigoContainer">
+            <pre>
+            SubProceso ingreso()
+                Definir Observaciones Como caracter;
+                Escribir "Ha seleccionado la opcion: ingreso de motocicleta";
+                Escribir "Ingrese las observaciones del cliente";
+                Leer Observaciones;
+            FinSubProceso
+            SubProceso salida()
+                Definir Novedades Como Caracter;
+                Escribir "Ha seleccionado la opcion: salida de motococleta";
+                Escribir "Ingrese novedades del mécanico";
+                Leer Novedades;
+            FinSubProceso
+            SubProceso arreglo()
+                Definir Arreglos Como Caracter;
+                Escribir "Ha seleccionado la opcion: salida de motococleta";
+                Escribir "Ingrese los arreglos hechos por el mecánico";
+                Leer Arreglos;
+            FinSubProceso
+
+            SubProceso Taller(Opcion)
+                Segun Opcion Hacer
+                    1:
+                        ingreso();
+                    2:
+                        salida();
+                    3:
+                        arreglo();
+                    De Otro Modo:
+                        Escribir "No ha seleccionado una opcion válida";
+                FinSegun
+                
+            FinSubProceso
+            Proceso Ejercicio1_6_taller2_semana2_cantera1
+                definir Opcion Como Real;
+                Escribir "Ingrese el número correspondiente a la opcion que quiere realizar: ";
+                Escribir "1: Registrar ingreso de motocicleta";
+                Escribir "2: Registrar salida de motococleta";
+                Escribir "3: Registrar arreglos realizados";
+                Leer Opcion;
+                Taller(Opcion);
+            FinProceso
+            </pre>
+        </div>
+        <p><b>7.</b> La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</p>
+        <div class="codigoContainer">
+            <pre>
+            SubProceso resultado <- imcFuncion(Peso, Estatura)
+                Definir Resultado como real;
+                resultado<-Peso/(Estatura^2);
+            FinSubProceso
+            SubProceso analisis(IMC)
+                si IMC < 18.5 Entonces
+                    Escribir "Su rango es BAJO PESO";
+                SiNo
+                    si IMC >= 18.5 Y IMC <= 24.9 Entonces
+                        Escribir "Su rango es NORMAL";
+                    SiNo
+                        si IMC >= 24.9 Y IMC <= 29.9 Entonces
+                            Escribir "Su rango es SOBREPESO";
+                        SiNo
+                            si IMC >= 29.9 Entonces
+                                Escribir "Su rango es OBESO";
+                            FinSi
+                        FinSi
+                    FinSi
+                FinSi
+            FinSubProceso
+
+            Proceso Ejercicio1_7_taller2_semana2_cantera1
+                definir Peso Como Real;
+                Definir Estatura Como Real;
+                Definir IMC Como Real;
+                Escribir "Ingrese su peso en kilogramos (ejm: 80, 71.1, etc)";
+                Leer Peso;
+                Escribir "Ingrese su estatura en metros (ejm: 1.90)";
+                Leer Estatura;
+                analisis(imcFuncion(Peso,Estatura));
+            FinProceso
+            </pre>
+        </div>
+        <p><b>8.</b> El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</p>
+        <div class="codigoContainer">
+            <pre>
+            SubProceso registrarPedido()
+                definir Porciones Como entero;
+                Definir Sabor Como caracter;
+                Definir Decoraciones Como caracter;
+                Escribir "Ingrese las especificaciones de la torta";
+                Escribir "Ingrese Numero de porciones (ejm: 8)";
+                Leer Porciones;
+                Escribir "Ingrese el sabor de la torta";
+                Leer Sabor;
+                Escribir "Ingrese las decoraciones de la torta";
+                Leer Decoraciones;
+            FinSubProceso
+            SubProceso registrarTorta()
+                definir Porciones Como entero;
+                Definir Sabor Como caracter;
+                Definir Decoraciones Como caracter;
+                Escribir "Ingrese las especificaciones de la torta";
+                Escribir "Ingrese Numero de porciones (ejm: 8)";
+                Leer Porciones;
+                Escribir "Ingrese el sabor de la torta";
+                Leer Sabor;
+                Escribir "Ingrese las decoraciones de la torta";
+                Leer Decoraciones;
+            FinSubProceso
+
+            SubProceso ingresarVenta()
+                    Definir Venta Como real;
+                Escribir "Ingrese la venta (ejm: 50000)";
+                Leer Venta;
+            FinSubProceso
+            SubProceso panaderia(Opcion)
+                Segun Opcion Hacer
+                    1:
+                        Escribir "Ha seleccionado la opcion: Registrar pedido";
+                        registrarPedido();
+                    2:
+                        Escribir "Ha seleccionado la opcion: Registrar tortas disponibles";
+                        registrarTorta();
+                    3:
+                        Escribir "Ha seleccionado la opcion: Registrar ventas";
+                        ingresarVenta();
+                    De Otro Modo:
+                        Escribir "No ha seleccionado una opcion válida";
+                FinSegun
+            FinSubProceso
+            Proceso Ejercicio1_8_taller2_semana2_cantera1
+                Definir Opcion como entero;
+                Escribir "Ingrese el número correspondiente a la opcion que quiere realizar: ";
+                Escribir "1: Registrar pedido";
+                Escribir "2: Registrar tortas disponibles";
+                Escribir "3: Registrar ventas";
+                Leer Opcion;
+                panaderia(Opcion);
+            FinProceso
+            </pre>
+        </div>
+        <p><b>9.</b> El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</p>
+        <div class="codigoContainer">
+            <pre>
+            SubProceso area(abc,band)
+                definir resul Como real;
+                si band=1 Entonces
+                    resul<-abc[0]*abc[1];
+                FinSi
+                si band=2 Entonces
+                    resul<-(abc[0]*abc[1])/2;
+                FinSi
+                si band=3 Entonces
+                    resul<-((abc[0]+abc[1])/2)*abc[2];
+                FinSi
+                Escribir "El area es ", resul;
+            FinSubProceso
+            SubProceso geometria(Opcion)
+                definir abc Como Real;
+                dimension abc[3];
+                Segun Opcion Hacer
+                    1:
+                        Escribir "Ha seleccionado la opcion: Calcular el área de un rectángulo";
+                        Escribir "Ingrese la longitud del lado A (ejm: 25)";
+                        Leer abc[0];
+                        Escribir "Ingrese la longitud del lado B (ejm: 20)";
+                        Leer abc[1];
+                        abc[2]<-0;
+                        area(abc,1);
+                    2:
+                        Escribir "Ha seleccionado la opcion: Calcular el área de un triángulo";
+                        Escribir "Ingrese la longitud de la base (ejm: 40)";
+                        Leer abc[0];
+                        Escribir "Ingrese la altura (ejm: 18)";
+                        Leer abc[1];
+                        abc[2]<-0;
+                        area(abc,2);
+                    3:
+                        Escribir "Ha seleccionado la opcion: Calcular el área de un Trapecio";
+                        Escribir "Ingrese la longitud de la base inferior (ejm: 40)";
+                        Leer abc[0];
+                        Escribir "Ingrese la longitud de la base superior (ejm: 18)";
+                        Leer abc[1];
+                        Escribir "Ingrese la altura (ejm: 15)";
+                        Leer abc[2];
+                        area(abc,3);
+                    De Otro Modo:
+                        Escribir "No ha seleccionado una opcion válida";
+                FinSegun
+            FinSubProceso
+            Proceso Ejercicio1_9_taller2_semana2_cantera1
+                Definir Opcion como entero;
+                Escribir "Ingrese el número correspondiente a la opcion que quiere realizar: ";
+                Escribir "1: Calcular el área de un rectángulo";
+                Escribir "2: Calcular el área de un triángulo";
+                Escribir "3: Calcular el área de un Trapecio";
+                Leer Opcion;
+                geometria(Opcion);
+            FinProceso
+            </pre>
+        </div>
+        <p><b>10.</b> El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</p>
+        <div class="codigoContainer">
+            <pre>
+            SubProceso validarIngreso(aux)
+                si aux>0 Entonces
+                    Escribir "Ingreso exitoso.";
+                SiNo
+                    Escribir "Los ingresos no pueden ser valores negativos.";
+                FinSi
+            FinSubProceso
+            SubProceso validarRetiro(aux,cantidad)
+                si aux<=cantidad Entonces
+                    Escribir "Retiro exitoso.";
+                SiNo
+                    Escribir "Los el monto no puede ser mayor al valor que tiene en la cuenta.";
+                FinSi
+            FinSubProceso
+            SubProceso consulta(titular, cantidad)
+                Escribir "El valor de la cuenta de ",titular," es: ", cantidad;
+            FinSubProceso
+            SubProceso menuBanco(Titular, cantidad)
+                Definir Opcion como entero;
+                Definir aux Como Real;
+                Escribir "Ingrese el número correspondiente a la opcion que quiere realizar: ";
+                Escribir "1: Realizar ingreso";
+                Escribir "2: Realizar retiro";
+                Escribir "3: Consultar saldo";
+                Leer Opcion;
+                Segun Opcion Hacer
+                    1:
+                        Escribir "Ha seleccionado la opcion: Realizar ingreso.";
+                        Escribir "Ingrese monto de ingreso";
+                        Leer aux;
+                        validarIngreso(aux);
+                    2:
+                        Escribir "Ha seleccionado la opcion:  Realizar retiro";
+                        Escribir "Ingrese monto de retiro";
+                        Leer aux;
+                        validarRetiro(aux,cantidad);
+                    3:
+                        Escribir "Ha seleccionado la opcion: Consultar saldo";
+                        consulta(Titular,cantidad);
+                    De Otro Modo:
+                        Escribir "No ha seleccionado una opcion válida";
+                FinSegun
+            FinSubProceso
+            Proceso Ejercicio1_10_taller2_semana2_cantera1
+                Definir Titular Como caracter;
+                Definir cantidad Como real;
+                Escribir "Ingrese el nombre del titular de la cuenta";
+                Leer Titular;
+                Escribir "Ingrese la cantidad";
+                Leer cantidad;
+                menuBanco(Titular,cantidad);
+            FinProceso
+            </pre>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>Organizar los puntos 6, 7 y 8 del taller de ciclos en modo funciones.:</h3>    
+        <p><b>6.</b> Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</p>
+        <div class="codigoContainer">
+            <pre>
+            SubProceso ingresar(Directorio Por Referencia)
+                definir aux Como Caracter;
+                Definir i,j Como real;
+                si Directorio[0,0]<>"" y Directorio[1,0]<>"" y Directorio[2,0]<>"" Entonces
+                    Escribir "Numero total de usuarios excedido, para ingresar un nuevo usuario primero elimine uno";
+                    Escribir"Presione enter para continuar";
+                    leer aux;
+                SiNo
+                    Escribir "Ingrese el número del contacto (ejm: 3123456789)";
+                    leer aux;
+                    para i<-0 hasta 2 Hacer
+                        si Directorio[i,1]=aux Entonces
+                            Escribir "Contacto ya existente";
+                            Escribir"Presione enter para continuar";
+                            Leer aux;
+                            i<-4;
+                        FinSi
+                    FinPara
+                    si i=3 Entonces
+                        para i<-0 hasta 2 Hacer
+                            si Directorio[i,0]="" Entonces
+                                Directorio[i,1]<-aux;//telefono
+                                escribir"ingrese el nombre del contacto";
+                                leer Directorio[i,0];//nombre
+                                Escribir "Ingrese la organizacion del contacto (ejm: sofka)";
+                                leer Directorio[i,2];//organizacion
+                                i<-4;
+                            FinSi
+                        FinPara
+                    FinSi
+                FinSi
+            FinSubProceso
+            SubProceso consulta(Directorio Por Referencia)
+                Definir aux Como Caracter;
+                Definir i Como Entero;
+                Escribir "Ingrese el nombre del contacto";
+                leer aux;
+                para i<-0 Hasta 2 Hacer
+                    si directorio[i,0]=aux Entonces
+                        Escribir "Contacto: ",directorio[i,0]," Telefono: ",directorio[i,1], " Organización: ",directorio[i,2];
+                        Escribir "Ingrese enter para continuar";
+                        leer aux;
+                        i<-4;
+                    FinSi
+                FinPara
+                si i = 3 Entonces
+                    Escribir "Contacto inexistente por favor intente nuevamente (Presione enter para continuar)";
+                    leer aux;
+                FinSi
+            FinSubProceso
+            SubProceso eliminar(Directorio Por Referencia)
+                Definir i, opcion  Como Entero;
+                Definir aux Como Caracter;
+                Escribir"Seleccione el contacto a eliminar:";
+                para i <-0 Hasta 2 Hacer
+                    Escribir i+1,": ",Directorio[i,0];
+                FinPara
+                leer opcion;
+                si opcion =1 o opcion =2 o opcion =3 Entonces
+                    para i<-0 hasta 2 hacer
+                        Directorio[opcion-1,i]<-"";
+                    FinPara
+                SiNo
+                    Escribir "Opcion no válida (presione enter para continuar)";
+                    leer aux;
+                FinSi
+            FinSubProceso
+            SubProceso menu(Directorio Por Referencia)
+                Definir opcion Como Entero;
+                Definir aux Como Caracter;
+                Repetir
+                    limpiar Pantalla;
+                    Escribir"Menú de usuario";
+                    Escribir"1: Ingresar contacto";
+                    Escribir"2: Buscar contacto";
+                    Escribir"3: Eliminar contacto";
+                    Escribir"4: Salir del sistema";
+                    leer opcion;
+                    Segun Opcion Hacer
+                        1:
+                            ingresar(Directorio);
+                        2:
+                            consulta(Directorio);
+                        3:
+                            eliminar(Directorio);
+                        4:
+                            Escribir "Adiós";
+                        De Otro Modo:
+                            Escribir "Opcion no válida (presione enter para continuar)";
+                            leer aux;
+                    FinSegun
+                Hasta Que opcion=4
+            FinSubProceso
+            Proceso Ejercicio2_6_taller2_semana2_cantera1
+                definir i,j Como Entero;
+                Definir Directorio Como caracter;
+                Dimension Directorio[3,3];
+                para i<-0 Hasta 2 Hacer
+                    para j<-0 hasta 2 Hacer
+                        Directorio[i,j]<-"";
+                    FinPara
+                FinPara
+                menu(Directorio);
+            FinProceso            
+            </pre>
+        </div>
+        <p><b>7.</b> El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</p>
+        <div class="codigoContainer">
+            <pre>
+            SubProceso ingresar(Vehiculos Por Referencia)
+                definir aux Como Caracter;
+                Definir i,j Como real;
+                si Vehiculos[0,0]<>"" y Vehiculos[1,0]<>"" y Vehiculos[2,0]<>"" y Vehiculos[3,0]<>""  Entonces
+                    Escribir "Numero total de autos excedido, para ingresar un nuevo auto primero retire uno";
+                    Escribir"Presione enter para continuar";
+                    leer aux;
+                SiNo
+                    Escribir "Ingrese la placa del vehículo (ejm: ABC123)";
+                    leer aux;
+                    para i<-0 hasta 3 Hacer
+                        si Vehiculos[i,0]=aux Entonces
+                            Escribir "vehiculo ya registrado";
+                            Escribir"Presione enter para continuar";
+                            Leer aux;
+                            i<-5;
+                        FinSi
+                    FinPara
+                    si i=4 Entonces
+                        para i<-0 hasta 3 Hacer
+                            si Vehiculos[i,0]="" Entonces
+                                Vehiculos[i,0]<-aux;//placa
+                                escribir"Ingrese la marca del vehículo (ejm: renault)";
+                                leer Vehiculos[i,1];//marca
+                                Escribir "Ingrese nombre completo del dueño del vehículo";
+                                leer Vehiculos[i,2];//nombre dueño
+                                Escribir "Ingrese el teléfono del dueño del vehículo (ejm: 3123456789)";
+                                leer Vehiculos[i,3];//telefono dueño
+                                i<-5;
+                            FinSi
+                        FinPara
+                    FinSi
+                FinSi
+            FinSubProceso
+            SubProceso consulta(Vehiculos Por Referencia)
+                Definir aux Como Caracter;
+                Definir i Como Entero;
+                Escribir "Ingrese placa del vehículo";
+                leer aux;
+                para i<-0 hasta 3 Hacer
+                    si Vehiculos[i,0]=aux Entonces
+                        Escribir "Contacto: ",Vehiculos[i,3],", Teléfono: ",Vehiculos[i,2], ", Placa: ",Vehiculos[i,2], ", Marca: ",Vehiculos[i,2];
+                        Escribir "Ingrese enter para continuar";
+                        leer aux;
+                        i<-5;
+                    FinSi
+                FinPara
+                si i = 4 Entonces
+                    Escribir "Vehículo no registrado por favor intente nuevamente (Presione enter para continuar)";
+                    leer aux;
+                FinSi
+            FinSubProceso
+            SubProceso retirar(Vehiculos Por Referencia)
+                Definir i, opcion  Como Entero;
+                Definir aux Como Caracter;
+                Escribir"Seleccione el vehiculo a retirar:";
+                para i <-0 hasta 3 Hacer
+                    Escribir i+1,": ",Vehiculos[i,0], " ",Vehiculos[i,1];
+                FinPara
+                leer opcion;
+                si opcion=1 o opcion=2 o opcion=3 o opcion=4 Entonces
+                    para i<-0 hasta 3 hacer
+                        Vehiculos[opcion-1,i]<-"";
+                    FinPara
+                SiNo
+                    Escribir "Opcion no válida (presione enter para continuar)";
+                    leer aux;
+                FinSi
+            FinSubProceso
+            SubProceso menu(Vehiculos Por Referencia)
+                Definir opcion Como Entero;
+                Definir aux Como Caracter;
+                Repetir
+                    Limpiar Pantalla;
+                    Escribir"Menú de usuario";
+                    Escribir"1: Ingresar auto";
+                    Escribir"2: Consultar auto";
+                    Escribir"3: Retirar auto";
+                    Escribir"4: Salir del sistema";
+                    leer opcion;
+                    Segun Opcion Hacer
+                        1:
+                            ingresar(Vehiculos);
+                        2:
+                            consulta(Vehiculos);
+                        3:
+                            retirar(Vehiculos);
+                        4:
+                            Escribir "Adiós";
+                        De Otro Modo:
+                            Escribir "Opcion no válida (presione enter para continuar)";
+                            leer aux;
+                    FinSegun
+                Hasta Que opcion=4
+            FinSubProceso
+            Proceso Ejercicio2_7_taller2_semana2_cantera1
+                definir i,j Como Entero;
+                Definir Vehiculos Como caracter;
+                Dimension Vehiculos[4,4];
+                para i<-0 hasta 3 Hacer
+                    para j<-0 hasta 3 Hacer
+                        Vehiculos[i,j]<-"";
+                    FinPara
+                FinPara
+                menu(Vehiculos);
+            FinProceso            
+            </pre>
+        </div>
+        <p><b>8.</b> La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</p>
+        <div class="codigoContainer">
+            <pre>
+            SubProceso registrar(alumnos Por Referencia)
+                definir aux Como Caracter;
+                Definir i,j Como real;
+                si alumnos[0,0]<>"" y alumnos[1,0]<>"" y alumnos[2,0]<>"" y alumnos[3,0]<>"" 
+                y alumnos[4,0]<>"" y alumnos[5,0]<>"" y alumnos[6,0]<>"" y alumnos[7,0]<>"" Entonces
+                    Escribir "Número total de alumnos excedido";
+                    Escribir"(Presione enter para continuar)";
+                    leer aux;
+                SiNo
+                    Escribir "Ingrese el nombre del alumno";
+                    leer aux;
+                    para i<-0 hasta 7 Hacer
+                        si alumnos[i,0]=aux Entonces
+                            Escribir "Alumno ya registrado";
+                            Escribir"(Presione enter para continuar)";
+                            Leer aux;
+                            i<-9;
+                        FinSi
+                    FinPara
+                    si i=8 Entonces
+                        para i<-0 hasta 7 Hacer
+                            si alumnos[i,0]="" Entonces
+                                alumnos[i,0]<-aux;//nombre
+                                i<-9;
+                            FinSi
+                        FinPara
+                    FinSi
+                FinSi
+            FinSubProceso
+            SubProceso consulta(alumnos Por Referencia)
+                Definir aux Como Caracter;
+                Definir i Como Entero;
+                Escribir "Estudiantes y resultados del curso de conducción";
+                para i<-0 hasta 7 Hacer
+                    si alumnos[i,0] ="" Entonces
+                        i<-9;
+                    SiNo
+                        Escribir "El estudiante ",alumnos[i,0], " ha sido inscrito al curso y obtuvo un resultado de: ", alumnos[i,1];
+                    FinSi
+                FinPara
+                Escribir "(Presione enter para continuar)";
+                leer aux;
+            FinSubProceso
+            SubProceso ingresarResultados(alumnos Por Referencia)
+                Definir i, opcion  Como Entero;
+                Definir aux Como Caracter;
+                Escribir"Seleccione el alumno a calificar:";
+                para i <-0 hasta 7 Hacer
+                    Escribir i+1,": ",alumnos[i,0], " ",alumnos[i,1];
+                FinPara
+                leer opcion;
+                si opcion=1 o opcion=2 o opcion=3 o opcion=4 o opcion=5 o opcion=6 o opcion=7 Entonces
+                    Escribir "Ingrese la calificacion del usuario (APROBADO o REPROBADO)";
+                    leer aux;
+                    alumnos[opcion,1]<-aux;
+                    Escribir "Ingreso exitoso (presione enter para continuar)";
+                    leer aux;
+                SiNo
+                    Escribir "Opcion no válida (presione enter para continuar)";
+                    leer aux;
+                FinSi
+            FinSubProceso
+            SubProceso menu(alumnos Por Referencia)
+                Definir opcion Como Entero;
+                Definir aux Como Caracter;
+                Repetir
+                    limpiar Pantalla;
+                    Escribir"Menú de usuario";
+                    Escribir"1: Ingresar usuario";
+                    Escribir"2: Ingresar resultados";
+                    Escribir"3: Consultar usuarios que presentaron el curso";
+                    Escribir"4: Salir del sistema";
+                    leer opcion;
+                    Segun Opcion Hacer
+                        1:
+                            registrar(alumnos);
+                        2:
+                            ingresarResultados(alumnos);
+                        3:
+                            consulta(alumnos);
+                        4:
+                            Escribir "Adiós";
+                        De Otro Modo:
+                            Escribir "Opcion no válida (presione enter para continuar)";
+                            leer aux;
+                    FinSegun
+                Hasta Que opcion=4
+            FinSubProceso
+            Proceso Ejercicio2_7_taller2_semana2_cantera1
+                definir i,j Como Entero;
+                Definir alumnos Como caracter;
+                Dimension alumnos[8,2];
+                para i<-0 hasta 7 Hacer
+                    para j<-0 hasta 1 Hacer
+                        alumnos[i,j]<-"";
+                    FinPara
+                FinPara
+                menu(alumnos);
+            FinProceso
+            </pre>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>Organizar todos los puntos del taller de arreglos en modo funciones.</h3>
+        <p><b>1.</b> Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:</p>
+            <ul>
+                <li>[0] = 55</li>
+                <li>[1] = 99</li>
+                <li>[2] = 11</li>
+                <li>[3] = 56</li>
+                <li>[4] = 69</li>
+            </ul> 
+        <div class="codigoContainer">
+            <pre>
+            SubProceso lectura(Arreglo)
+                Definir i Como Entero;
+                para i<-0 Hasta 4 Hacer
+                    Escribir "Ingrese el dato ",i+1,;
+                    leer Arreglo[i];
+                FinPara
+            FinSubProceso
+            SubProceso imprimir(Arreglo)
+                Definir i Como Entero;
+                para i<-0 Hasta 4 Hacer
+                    Escribir "[",i,"] = ",Arreglo[i];
+                FinPara
+            FinSubProceso
+            Proceso Ejercicio3_1_taller2_semana2_cantera1
+                Definir Arreglo Como entero;
+                Dimension Arreglo[5];
+                lectura(Arreglo);
+                imprimir(Arreglo);
+            FinProceso
+            </pre>
+        </div>
+        <p><b>2.</b> Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo</p>
+        <ul>
+            <li>Números pares: 2, 4, 6, 8, 10</li>
+            <li>Números impares: 1, 3, 5, 7, 9</li>
+        </ul> 
+        <div class="codigoContainer">
+            <pre>
+            SubProceso lectura(arreglo)
+                Definir i,j, aux Como Entero;
+                i<-0;
+                Mientras i<=19 Hacer
+                    Escribir "Ingrese el dato ",i+1,;
+                    leer Arreglo[i];
+                    i<-i+1;
+                FinMientras
+            FinSubProceso
+            SubProceso pares(Arreglo)
+                Definir i,j, aux Como Entero;
+                Escribir "Números pares: ", " "Sin Saltar;
+                para i<-0 Hasta 19 Hacer
+                    j<-arreglo[i];
+                    aux<-0;
+                    si arreglo[i]%2=0 Entonces
+                        Escribir Arreglo[i], ", "," "Sin Saltar;
+                    FinSi
+                FinPara
+                Escribir " ";
+            FinSubProceso
+            SubProceso impares(Arreglo)
+                Definir i,j,aux Como Entero;
+                Escribir "Números impares: ", " "Sin Saltar;
+                para i<-0 Hasta 19 Hacer
+                    j<-arreglo[i];
+                    aux<-0;
+                    si arreglo[i]%2<>0 Entonces
+                        Escribir Arreglo[i], ", "," "Sin Saltar;
+                    FinSi
+                FinPara
+                Escribir " ";
+            FinSubProceso
+            Proceso Ejercicio3_2_taller2_semana2_cantera1
+                Definir Arreglo Como entero;
+                Dimension Arreglo[20];
+                Definir i,j, aux Como Entero;
+                lectura(arreglo);
+                //Pares
+                pares(Arreglo);
+                //Impares
+                impares(Arreglo);
+            FinProceso
+            </pre>
+        </div>
+        <p><b>3.</b> Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</p>
+        <div class="codigoContainer">
+            <pre>
+            SubProceso cont<-condicion(num)
+                definir cont,aux Como Entero;
+                aux<-num;
+                cont<-0;
+                mientras cont<2 o aux>0 Hacer
+                    si num%aux=0 Entonces
+                        cont<-cont+1;
+                    FinSi
+                    aux<-aux-1;
+                FinMientras
+            FinSubProceso
+            SubProceso imprimir(primos por referencia, n Por Referencia)
+                Definir i Como Entero;
+                para i<-0 Hasta n-1 Hacer
+                    Escribir primos[i],", " Sin Saltar;
+                FinPara
+                Escribir " ";
+            FinSubProceso
+            SubProceso n<-llenado(primos por referencia)
+                Definir i,j, k,bandera, n Como Entero;
+                j<-2;
+                k<-0;
+                n<-0;
+                para i<-0 Hasta 999 Hacer
+                    bandera<-condicion(j);
+                    si bandera=2 Entonces
+                        n<-n+1;
+                        primos[k]<-j;
+                        k<-k+1;
+                    FinSi
+                    j<-j+1;
+                FinPara
+            FinSubProceso
+            Proceso Ejercicio3_3_taller2_semana2_cantera1
+                Definir primos Como entero;
+                Dimension primos[1000];
+                Definir i,j, k, aux, aux2, n Como Entero;
+                n<-llenado(primos);
+                imprimir(primos,n);
+                
+            FinProceso            
+            </pre>
+        </div>
+        <p><b>4.</b> Dada la siguiente matriz bidimensional, el cual debe de quemar en el código</p>
+        <ul>
+            <li>01 02 03 04 05</li>
+            <li>06 07 08 09 10</li>
+            <li>11 12 13 14 15</li>
+            <li>16 17 18 19 20</li>
+        </ul> 
+        <p>Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.</p>
+        <ul>
+            <li>01 02 03 04 05</li>
+            <li>10 09 08 07 06</li>
+            <li>11 12 13 14 15</li>
+            <li>20 19 18 17 16</li>
+        </ul> 
+        <div class="codigoContainer">
+            <pre>
+            SubProceso llenado(mat)
+                mat[0,0]<-"01";
+                mat[0,1]<-"02";
+                mat[0,2]<-"03";
+                mat[0,3]<-"04";
+                mat[0,4]<-"05";
+                mat[1,0]<-"06";
+                mat[1,1]<-"07";
+                mat[1,2]<-"08";
+                mat[1,3]<-"09";
+                mat[1,4]<-"10";
+                mat[2,0]<-"11";
+                mat[2,1]<-"12";
+                mat[2,2]<-"13";
+                mat[2,3]<-"14";
+                mat[2,4]<-"15";
+                mat[3,0]<-"16";
+                mat[3,1]<-"17";
+                mat[3,2]<-"18";
+                mat[3,3]<-"19";
+                mat[3,4]<-"20";
+            FinSubProceso
+            SubProceso imprimir(mat)
+                Definir i,j Como Entero;
+                para i<-0 Hasta 2 Con Paso 2 Hacer
+                    para j<-0 hasta 4 hacer
+                        Escribir  mat[i,j]," "Sin Saltar;
+                    FinPara
+                    Escribir "";
+                    para j<-4 hasta 0 con paso -1 hacer
+                        Escribir  mat[i+1,j]," "Sin Saltar;
+                    FinPara
+                    Escribir "";
+                FinPara
+            FinSubProceso
+            Proceso Ejercicio3_4_taller2_semana2_cantera1
+                Definir mat Como caracter;
+                Dimension mat[4,5];
+                llenado(mat);
+                imprimir(mat);
+            FinProceso
+            </pre>
+        </div>
+        <p><b>5.</b> Se debe de imprimir el siguiente cuadro</p>
+        <img src="img/T4_5.png" alt="Tablas">
+        <p>El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario</p>
+        <div class="codigoContainer">
+            <pre>
+            SubProceso imprimir()
+                Definir filas como caracter;
+                Dimension filas[5];
+                Definir i,j Como Entero;
+                filas[0]<-"f";
+                filas[1]<-"i";
+                filas[2]<-"l";
+                filas[3]<-"a";
+                filas[4]<-"s";
+                Escribir" Ingrese la fila u columna de la cual desea ver el resultado: ";
+                Escribir"";
+                Escribir "                         columnas";
+                
+                para i<-0 Hasta 9 Hacer
+                    Si i=0 Entonces
+                        Escribir "           ",Sin Saltar;
+                        para j<-0 hasta 9 hacer
+                            Escribir j,"     "Sin Saltar;
+                        FinPara
+                        Escribir "";
+                    FinSi
+                    Si i>=2 y i<=6 Entonces
+                        Escribir " ",filas[i-2],"  ", i,"     "Sin Saltar;
+                    SiNo
+                        Escribir "    ",i,"     "Sin Saltar;
+                    FinSi
+                    
+                    si i<=8 Entonces
+                        para j<-0 hasta 9 hacer
+                            Escribir (i+1),"x",(j+1),"   "Sin Saltar;
+                        FinPara
+                    SiNo
+                        para j<-0 hasta 9 hacer
+                            Escribir (i+1),"x",(j+1),"  "Sin Saltar;
+                        FinPara
+                    FinSi
+                    Escribir "";
+                FinPara
+            FinSubProceso
+            SubProceso resultado(mat)
+                Definir f,c Como Entero;
+                Escribir "Ingrese número de la fila ";
+                leer f;
+                Escribir "Ingrese número de la fila ";
+                leer c;
+                Escribir "el resultado de ",c+1,"x",f+1, " es: ",  mat[f,c];
+            FinSubProceso
+
+            Proceso Ejercicio4_taller1_semana2_cantera1
+                Definir mat Como entero;
+                Definir filas Como Caracter;
+                Dimension mat[10,10];
+                llenado(mat);
+                imprimir();
+                resultado(mat);
+            FinProceso
+            </pre>
+        </div>
+    </div>
+</body>
+
+</html>

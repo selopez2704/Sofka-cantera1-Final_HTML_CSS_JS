@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+    <script src="js/utils.js"></script>
+    <title>Referencias Familiares</title>
+</head>
+
+<body id="body" class="tema-blueberry" onload="main()">
+    <div id="top-banner">
+        <div id="img-container">
+            <img src="img/profile_pic.jpeg">
+            <h1>Referencias familiares</h1>
+            <h2>Sebastián López Mazo</h2>
+            <a id="portafolio" onclick="volverPortafolio()">Volver al porfafolio</a>
+        </div>
+        <div>
+            <select name="tema" id="temaSelect">
+                <option value="1">blueberry</option>
+                <option value="2">strawberry</option>
+                <option value="3">mint</option>
+                <option value="4">mono</option>
+            </select>
+            <a id=" cambiarTema" class="button" onclick="cambiarTema1()"> cambiar </a>
+        </div>
+    </div>
+    <div  id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="index.html">Información principal </a>
+            </li>
+            <li>
+                <a href="expeciencia.html">Experiencia laboral</a>
+            </li>
+            <li>
+                <a href="rPersonal.html">Referencias personales</a>
+            </li>
+            <li>
+                <a href="rFamiliar.html">Referencias familiares</a>
+            </li>
+            <li>
+                <a href="estudios.html">Estudios realizados</a>
+            </li>
+            <li>
+                <a href="pdf/SebastianLopezMazo_CV.pdf" target="_blank" download>Descargar</a>
+            </li>
+        </ul>
+    </div>
+        <button class="accordion">Referencia 1</button>
+        <div class="panel">
+            <div class="separador" style="text-align: center;"></div>
+            <p>Cristina Mazo Fernandez</p>
+            <p>Parentezco: madre</p>
+            <p>Ama de casa</p>
+            <p>3147204544</p>
+        </div>
+        <button class="accordion">Referencia 2</button>
+        <div class="panel">
+            <div class="separador"></div>
+            <p>Sandra Mazo Fernandez</p>
+            <p>Parentezco: tía </p>
+            <p>Diseñadora gráfica</p>
+            <p>3007871645</p>
+        </div>
+        <button class="accordion">Referencia 3</button>
+        <div class="panel">
+            <div class="separador"></div>
+            <p>Eduardo Lopez Sanchez</p>
+            <p>Parentezco: padre</p>
+            <p>Conductor</p>
+            <p>3508673776</p>
+        </div>
+        <br><br><br><br>
+</body>
+</html>

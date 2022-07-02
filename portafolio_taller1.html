@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/main.js"></script>
+    <title>Portafolio</title>
+</head>
+<body class="portafolio"onload="main()">
+    <div class="top-banner">
+        <h1>Portafolio de ejercicios taller final HTML-CSS-JS</h1>
+    </div>
+    <div id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="index.html">Formulario de contacto</a>
+            </li>
+            <li>
+                <a href="lista.html">Lista de frutas</a>
+            </li>
+            <li>
+                <a href="portafolio_taller1.html">Portafolio de talleres</a>
+            </li>
+        </ul>
+    </div>
+    <div id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="portafolio_taller1.html">Impresión</a>
+            </li>
+            <li>
+                <a href="portafolio_taller2.html">Condicionales</a>
+            </li>
+            <li>
+                <a href="portafolio_taller3.html">Ciclos</a>
+            </li>
+            <li>
+                <a href="portafolio_taller4.html">Arreglos</a>
+            </li>
+            <li>
+                <a href="portafolio_taller5.html">Funciones</a>
+            </li>
+            <li>
+                <a href="portafolio_tallerJava.html">Java</a>
+            </li>
+            <li>
+                <a href="cv/index.html">Hoja de Vida</a>
+            </li>
+        </ul>
+    </div>
+    <!-- contenido -->
+    <div class="portafolioContainer">
+        <h2 class="center">Taller de variables e impresión 🖨️</h2>
+
+        <h3>Video</h3>
+        <iframe  width="400" height="250" src="https://www.youtube.com/embed/Ey4L42iMi8U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <br>
+        <h3>Ejercicios:</h3>    
+        <p><b>1.</b> Realizar un programa el cual solicite su nombre y apellidos.</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio1_taller1_semana1_cantera1
+                Definir Nombre Como Caracter;
+                Definir Apellidos Como Caracter;
+                Escribir "Ingrese su nombre ";
+                Leer Nombre;
+                Escribir "Ingrese sus apellidos separado por un espacio en blanco ";
+                Leer Apellidos;
+                FinProceso
+            </pre>
+        </div>
+        <p><b>2.</b> Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio2_taller1_semana1_cantera1
+                    Definir Nombre Como Caracter;
+                    Definir Apellidos Como Caracter;
+                    Definir Edad Como Entero;
+                    Definir Estatura Como Real;
+                    Escribir "Ingrese su nombre ";
+                    Leer Nombre;
+                    Escribir "Ingrese sus apellidos separado por un espacio en blanco ";
+                    Leer Apellidos;
+                    Escribir "Ingrese su edad (ejm: 12)";
+                    Leer Edad;
+                    Escribir "Ingrese su estatura (ejm: 1.71)";
+                    Leer Estatura;
+                FinProceso
+            </pre>
+        </div>
+        <p><b>3.</b> Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso  Ejercicio3_taller1_semana1_cantera1
+                    Definir Nombre Como Caracter;
+                    Definir Apellidos Como Caracter;
+                    Definir NombreMadre Como Caracter;
+                    Definir ApellidosMadre Como Caracter;
+                    Definir NombrePadre Como Caracter;
+                    Definir ApellidosPadre Como Caracter;
+                    Escribir "Ingrese su nombre";
+                    Leer Nombre;
+                    Escribir "Ingrese sus apellidos separado por un espacio en blanco";
+                    Leer Apellidos;
+                    Escribir "Ingrese el nombre de su madre";
+                    Leer NombreMadre;
+                    Escribir "Ingrese sus apellidos de su madre separado por un espacio en blanco ";
+                    Leer ApellidosMadre;
+                    Escribir "Ingrese el nombre de su padre";
+                    Leer NombrePadre;
+                    Escribir "Ingrese sus apellidos de su padre separado por un espacio en blanco ";
+                    Leer ApellidosPadre;
+                    Escribir "Yo ", Nombre, " ", Apellidos, ", soy hijo de ", NombreMadre, " y ", NombrePadre ,".";
+                FinProceso
+            </pre>
+        </div>
+        <p><b>4.</b> Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]</p>
+        <div class="codigoContainer">
+            <pre>
+            Proceso Ejercicio4_taller1_semana1_cantera1
+                Definir Pais Como Caracter;
+                Definir Capital Como Caracter;
+                Escribir "Ingrese pais";
+                Leer Pais;
+                Escribir "Ingrese la capital del anterior pais";
+                Leer Capital;
+                Escribir "La ciudad ", Capital,", es la capital del país ", Pais;
+            FinProceso
+            </pre>
+        </div>
+        <p><b>5.</b>Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</p>
+        <div class="codigoContainer">
+            <pre>
+            Proceso Ejercicio5_taller1_semana1_cantera1
+                Definir NomMasc Como Caracter;
+                Definir EdadMasc Como entero;
+                Definir TipoMasc Como Caracter;
+                Definir NomComDueno Como Caracter;
+                Escribir "Ingrese el nombre de su mascota";
+                Leer NomMasc;
+                Escribir "Ingrese el la edad en años de su mascota (ejm: 3)";
+                Leer EdadMasc;
+                Escribir "Ingrese el tipo de mascota";
+                Leer TipoMasc;
+                Escribir "Ingrese su nombre completo";
+                Leer NomComDueno;
+                Escribir NomMasc," es un(a) ", TipoMasc ,", el cual, tiene ",EdadMasc ," años de edad
+                  y " ,NomComDueno , " es actualmente su dueño(a).";
+            FinProceso
+            </pre>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+    <script src="js/utils.js"></script>
+    <title>Hoja de vida</title>
+</head>
+
+<body id="body" class="tema-blueberry" onload="main()">
+    <div id="top-banner" >
+        <div id="img-container" >
+            <img src="img/profile_pic.jpeg">
+            <h1>Hoja de vida</h1>
+            <h2>Sebastián López Mazo</h2>
+            <a id="portafolio" onclick="volverPortafolio()">Volver al porfafolio</a>
+        </div>
+        <div>
+            <select name="tema" id="temaSelect">
+                <option value="1" ">blueberry</option>
+                <option value="2" ">strawberry</option>
+                <option value="3" ">mint</option>
+                <option value="4" ">mono</option>
+            </select>
+            <a id="cambiarTema" class="button" onclick="cambiarTema1()""> cambiar </a>
+        </div>
+
+    </div>
+    <div id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="index.html">Información principal </a>
+            </li>
+            <li>
+                <a href="expeciencia.html">Experiencia laboral</a>
+            </li>
+            <li>
+                <a href="rPersonal.html">Referencias personales</a>
+            </li>
+            <li>
+                <a href="rFamiliar.html">Referencias familiares</a>
+            </li>
+            <li>
+                <a href="estudios.html">Estudios realizados</a>
+            </li>
+            <li>
+                <a href="pdf/SebastianLopezMazo_CV.pdf" target="_blank" download>Descargar</a>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <div class="content-block">
+            <h3>PERFIL PROFESIONAL</h3><br>
+            <p>Estudiante de ingeniería en sistemas
+                con experiencia en el cargo de jefe
+                de desarrollo, conocimientos en
+                POO, HTML, CSS, PYTHON, SCRUM,
+                UML, desarrollos de sitios web e-commerce con gestores de
+                contenido CMS, manejo de GIT. </p><br><br><br><br>
+            <h3>CUALIDADES</h3><br>
+            <p>Trabajo en equipo | Honestidad |
+                Compromiso |Respeto</p>
+            <p><a href="mailto:sebastianlopezmazo@gmail.com">sebastianlopezmazo@gmail.com</a> |
+                319 523 6851 |
+                Medellin - Colombia</p>
+        </div>
+    </div>
+    <br><br><br><br>
+</body>
+
+</html>

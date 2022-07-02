@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/main.js"></script>
+    <title>Portafolio</title>
+</head>
+<body class="portafolio"onload="main()">
+    <div class="top-banner">
+        <h1>Portafolio de ejercicios taller final HTML-CSS-JS</h1>
+    </div>
+    <div id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="index.html">Formulario de contacto</a>
+            </li>
+            <li>
+                <a href="lista.html">Lista de frutas</a>
+            </li>
+            <li>
+                <a href="portafolio_taller1.html">Portafolio de talleres</a>
+            </li>
+        </ul>
+    </div>
+    <div id="menu-container">
+        <ul class="menu">
+            <li>
+                <a href="portafolio_taller1.html">Impresión</a>
+            </li>
+            <li>
+                <a href="portafolio_taller2.html">Condicionales</a>
+            </li>
+            <li>
+                <a href="portafolio_taller3.html">Ciclos</a>
+            </li>
+            <li>
+                <a href="portafolio_taller4.html">Arreglos</a>
+            </li>
+            <li>
+                <a href="portafolio_taller5.html">Funciones</a>
+            </li>
+            <li>
+                <a href="portafolio_tallerJava.html">Java</a>
+            </li>
+            <li>
+                <a href="cv/index.html">Hoja de Vida</a>
+            </li>
+        </ul>
+    </div>
+    <!-- contenido -->
+    <div class="portafolioContainer">
+        <h2 class="center">Taller de arreglos 🎞️</h2>
+
+        <h3>Video</h3>
+        <iframe  width="400" height="250" src="https://www.youtube.com/embed/WWhu0Cc986Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <br>
+        <h3>Ejercicios:</h3>    
+        <p><b>1.</b> Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:</p>
+            <ul>
+                <li>[0] = 55</li>
+                <li>[1] = 99</li>
+                <li>[2] = 11</li>
+                <li>[3] = 56</li>
+                <li>[4] = 69</li>
+            </ul> 
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio1_taller1_semana2_cantera1
+                    Definir Arreglo Como entero;
+                    Dimension Arreglo[5];
+                    Definir i Como Entero;
+                    para i<-0 Hasta 4 Hacer
+                        Escribir "Ingrese el dato ",i+1,;
+                        leer Arreglo[i];
+                    FinPara
+                    para i<-0 Hasta 4 Hacer
+                        Escribir "[",i,"] = ",Arreglo[i];
+                    FinPara
+                FinProceso
+            </pre>
+        </div>
+        <p><b>2.</b> Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo</p>
+        <ul>
+            <li>Números pares: 2, 4, 6, 8, 10</li>
+            <li>Números impares: 1, 3, 5, 7, 9</li>
+        </ul> 
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio2_taller1_semana2_cantera1
+                    Definir Arreglo Como entero;
+                    Dimension Arreglo[20];
+                    Definir i,j, aux Como Entero;
+                    i<-0;
+                    Mientras i<=19 Hacer
+                        Escribir "Ingrese el dato ",i+1,;
+                        leer Arreglo[i];
+                        i<-i+1;
+                    FinMientras
+                    //Pares
+                    Escribir "Números pares: ", " "Sin Saltar;
+                    para i<-0 Hasta 19 Hacer
+                        j<-arreglo[i];
+                        aux<-0;
+                        si arreglo[i]%2=0 Entonces
+                            Escribir Arreglo[i], ", "," "Sin Saltar;
+                        FinSi
+                    FinPara
+                    //Impares
+                    Escribir " ";
+                    Escribir "Números impares: ", " "Sin Saltar;
+                    para i<-0 Hasta 19 Hacer
+                        j<-arreglo[i];
+                        aux<-0;
+                        si arreglo[i]%2<>0 Entonces
+                            Escribir Arreglo[i], ", "," "Sin Saltar;
+                        FinSi
+                    FinPara
+                    Escribir " ";
+                FinProceso
+            </pre>
+        </div>
+        <p><b>3.</b> Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio3_taller1_semana2_cantera1
+                    Definir primos Como entero;
+                    Dimension primos[1000];
+                    Definir i,j, k, aux, aux2, n Como Entero;
+                    j<-2;
+                    k<-0;
+                    n<-0;
+                    para i<-0 Hasta 999 Hacer
+                        aux<-0;
+                        aux2<-j;
+                        mientras aux<2 o aux2>0 Hacer
+                            si j%aux2=0 Entonces
+                                aux<-aux+1;
+                            FinSi
+                            aux2<-aux2-1;
+                        FinMientras
+                        si aux=2 Entonces
+                            n<-n+1;
+                            primos[k]<-j;
+                            //Escribir j,", "Sin Saltar;
+                            k<-k+1;
+                        FinSi
+                        j<-j+1;
+                    FinPara
+                    para i<-0 Hasta n-1 Hacer
+                        Escribir primos[i],", " Sin Saltar;
+                    FinPara
+                    Escribir " ";
+                FinProceso
+            </pre>
+        </div>
+        <p><b>4.</b> Dada la siguiente matriz bidimensional, el cual debe de quemar en el código</p>
+        <ul>
+            <li>01 02 03 04 05</li>
+            <li>06 07 08 09 10</li>
+            <li>11 12 13 14 15</li>
+            <li>16 17 18 19 20</li>
+        </ul> 
+        <p>Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.</p>
+        <ul>
+            <li>01 02 03 04 05</li>
+            <li>10 09 08 07 06</li>
+            <li>11 12 13 14 15</li>
+            <li>20 19 18 17 16</li>
+        </ul> 
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio4_taller1_semana2_cantera1
+                    Definir mat Como caracter;
+                    Definir i, j Como Entero;
+                    Dimension mat[4,5];
+                    mat[0,0]<-"01";
+                    mat[0,1]<-"02";
+                    mat[0,2]<-"03";
+                    mat[0,3]<-"04";
+                    mat[0,4]<-"05";
+                    mat[1,0]<-"06";
+                    mat[1,1]<-"07";
+                    mat[1,2]<-"08";
+                    mat[1,3]<-"09";
+                    mat[1,4]<-"10";
+                    mat[2,0]<-"11";
+                    mat[2,1]<-"12";
+                    mat[2,2]<-"13";
+                    mat[2,3]<-"14";
+                    mat[2,4]<-"15";
+                    mat[3,0]<-"16";
+                    mat[3,1]<-"17";
+                    mat[3,2]<-"18";
+                    mat[3,3]<-"19";
+                    mat[3,4]<-"20";
+                    para i<-0 Hasta 2 Con Paso 2 Hacer
+                        para j<-0 hasta 4 hacer
+                            Escribir  mat[i,j]," "Sin Saltar;
+                        FinPara
+                        Escribir "";
+                        para j<-4 hasta 0 con paso -1 hacer
+                            Escribir  mat[i+1,j]," "Sin Saltar;
+                        FinPara
+                        Escribir "";
+                    FinPara            
+                FinProceso            
+            </pre>
+        </div>
+        <p><b>5.</b> Se debe de imprimir el siguiente cuadro</p>
+        <img src="img/T4_5.png" alt="Tablas">
+        <p>El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario</p>
+        <div class="codigoContainer">
+            <pre>
+                Proceso Ejercicio4_taller1_semana2_cantera1
+                    Definir mat Como entero;
+                    Definir filas Como Caracter;
+                    Dimension mat[10,10];
+                    Dimension filas[5];
+                    Definir i,j,f,c Como Entero;
+                    filas[0]<-"f";
+                    filas[1]<-"i";
+                    filas[2]<-"l";
+                    filas[3]<-"a";
+                    filas[4]<-"s";
+                    para i<-0 Hasta 9 Hacer
+                        para j<-0 hasta 9 hacer
+                            mat[i,j]<-(i+1)*(j+1);
+                        FinPara
+                    FinPara
+                    
+                    Escribir" Ingrese la fila u columna de la cual desea ver el resultado: ";
+                    Escribir"";
+                    Escribir "                         columnas";
+                    
+                    para i<-0 Hasta 9 Hacer
+                        Si i=0 Entonces
+                            Escribir "           ",Sin Saltar;
+                            para j<-0 hasta 9 hacer
+                                Escribir j,"     "Sin Saltar;
+                            FinPara
+                            Escribir "";
+                        FinSi
+                        Si i>=2 y i<=6 Entonces
+                            Escribir " ",filas[i-2],"  ", i,"     "Sin Saltar;
+                        SiNo
+                            Escribir "    ",i,"     "Sin Saltar;
+                        FinSi
+                        
+                        si i<=8 Entonces
+                            para j<-0 hasta 9 hacer
+                                Escribir (i+1),"x",(j+1),"   "Sin Saltar;
+                            FinPara
+                        SiNo
+                            para j<-0 hasta 9 hacer
+                                Escribir (i+1),"x",(j+1),"  "Sin Saltar;
+                            FinPara
+                        FinSi
+                        Escribir "";
+                    FinPara
+                    Escribir "Ingrese número de la fila ";
+                    leer f;
+                    Escribir "Ingrese número de la colunna ";
+                    leer c;
+                    Escribir "el resultado de ",c+1,"x",f+1, " es: ",  mat[f,c];
+                    
+                FinProceso
+            </pre>
+        </div>
+    </div>
+</body>
+
+</html>
